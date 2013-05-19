@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "SSoundView.h"
 
-@interface SSoundViewController : UIViewController
+@interface SSoundViewController : UIViewController {
+    
+    
+}
 
--(void)loadView;
+
 
 @end

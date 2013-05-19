@@ -17,6 +17,7 @@
     int dpY;
     
     NSMutableArray *totalSoundShapes;
+    SSoundShape *playhead;
     
     UIColor *uciBlueColor;
     UIColor *uciGoldColor;

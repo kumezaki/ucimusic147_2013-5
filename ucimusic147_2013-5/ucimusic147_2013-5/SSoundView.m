@@ -10,14 +10,21 @@
 
 @implementation SSoundView
 
-- (id)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
     if (self) {
         // Initialization code
         totalSoundShapes = [[NSMutableArray alloc] init];
         self.backgroundColor = [UIColor blackColor];
         uciBlueColor = [UIColor colorWithRed:0./255. green:34./255. blue:68./255. alpha:1.];
         uciGoldColor = [UIColor colorWithRed:255./255. green:222./255. blue:108./255. alpha:1.];
+        
+        // Create the playhead
+        playhead = [[SSoundShape alloc] init];
+        playhead.sPoint = CGPointMake(0, 0);
+        playhead.sWidth = 400;
+        playhead.sHeight = 10;
+        [totalSoundShapes addObject:playhead];
     }
     return self;
 }
@@ -56,9 +63,7 @@
         
         // Create a new SSoundShape Object
         SSoundShape *newSoundShape = [[SSoundShape alloc] init];
-        // Set the top left point of the shape
         newSoundShape.sPoint = CGPointMake(pX, pY);
-        // Set shape width and height
         newSoundShape.sWidth = dpX;
         newSoundShape.sHeight = dpY;
         
@@ -78,23 +83,26 @@
     // Set the stroke width
     CGContextSetLineWidth(context, 3.0);
     
+    // Reset playhead position (currently the playhead isn't driven by the sequencer just clicks)
+    playhead.sPoint = CGPointMake(playhead.sPoint.x, playhead.sPoint.y + 5);
+    if(playhead.sPoint.y > self.bounds.size.height) {
+        playhead.sPoint = CGPointMake(playhead.sPoint.x, 0);
+    }
+    
     // Loop through the shapes and Draw each to the view
     for (SSoundShape *shape in totalSoundShapes) {
-        // Create shape
-        CGContextAddRect(context, shape.makeShape);
-        // Draw
+        // Draw shape
+        CGRect shape1 = shape.makeShape;
+        CGContextAddRect(context, shape1);
         [uciGoldColor set];
         CGContextStrokePath(context);
         [uciBlueColor set];
-        // Handle simple collision
-        CGContextFillRect(context, shape.makeShape);
-        for (SSoundShape *s in totalSoundShapes) {
-            CGRect shape1 = s.makeShape;
-            CGRect shape2 = shape.makeShape;
-            if(shape1.size.width != shape2.size.width && CGRectIntersectsRect(shape1, shape2)) {
-                [[UIColor redColor] set];
-                CGContextFillRect(context, shape2);
-            }
+        CGContextFillRect(context, shape1);
+        
+        // Handle shape collision with playhead
+        if(CGRectIntersectsRect(shape1, playhead.makeShape)) {
+            [[UIColor redColor] set];
+            CGContextFillRect(context, shape1);
         }
     }
 }
