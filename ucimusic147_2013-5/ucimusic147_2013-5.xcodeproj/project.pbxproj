@@ -7,112 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37E891EF174707DC0073BE97 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E891EE174707DC0073BE97 /* UIKit.framework */; };
-		37E891F1174707DC0073BE97 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E891F0174707DC0073BE97 /* Foundation.framework */; };
-		37E891F3174707DC0073BE97 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E891F2174707DC0073BE97 /* CoreGraphics.framework */; };
-		37E891F9174707DC0073BE97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 37E891F7174707DC0073BE97 /* InfoPlist.strings */; };
-		37E891FB174707DC0073BE97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E891FA174707DC0073BE97 /* main.m */; };
-		37E891FF174707DC0073BE97 /* SSoundAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E891FE174707DC0073BE97 /* SSoundAppDelegate.m */; };
-		37E89201174707DC0073BE97 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E89200174707DC0073BE97 /* Default.png */; };
-		37E89203174707DC0073BE97 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E89202174707DC0073BE97 /* Default@2x.png */; };
-		37E89205174707DC0073BE97 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37E89204174707DC0073BE97 /* Default-568h@2x.png */; };
-		37E89208174707DC0073BE97 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37E89206174707DC0073BE97 /* MainStoryboard.storyboard */; };
-		37E8920B174707DC0073BE97 /* SSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E8920A174707DC0073BE97 /* SSoundViewController.m */; };
-		37E892151747080C0073BE97 /* SSoundShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E892121747080C0073BE97 /* SSoundShape.m */; };
-		37E892161747080C0073BE97 /* SSoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E892141747080C0073BE97 /* SSoundView.m */; };
+		040FD6A9174C6E3D009008C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040FD6A8174C6E3D009008C8 /* UIKit.framework */; };
+		040FD6AB174C6E3D009008C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040FD6AA174C6E3D009008C8 /* Foundation.framework */; };
+		040FD6AD174C6E3D009008C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040FD6AC174C6E3D009008C8 /* CoreGraphics.framework */; };
+		040FD6B3174C6E3D009008C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 040FD6B1174C6E3D009008C8 /* InfoPlist.strings */; };
+		040FD6B5174C6E3D009008C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6B4174C6E3D009008C8 /* main.m */; };
+		040FD6B9174C6E3D009008C8 /* SSoundAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6B8174C6E3D009008C8 /* SSoundAppDelegate.m */; };
+		040FD6BC174C6E3D009008C8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040FD6BA174C6E3D009008C8 /* MainStoryboard.storyboard */; };
+		040FD6BF174C6E3D009008C8 /* SSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6BE174C6E3D009008C8 /* SSoundViewController.m */; };
+		040FD6CB174C6E98009008C8 /* SSoundShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6CA174C6E98009008C8 /* SSoundShape.m */; };
+		040FD6CE174C6EA0009008C8 /* SSoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6CD174C6EA0009008C8 /* SSoundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		37E891EB174707DC0073BE97 /* ucimusic147_2013-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ucimusic147_2013-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		37E891EE174707DC0073BE97 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		37E891F0174707DC0073BE97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		37E891F2174707DC0073BE97 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		37E891F6174707DC0073BE97 /* ucimusic147_2013-5-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ucimusic147_2013-5-Info.plist"; sourceTree = "<group>"; };
-		37E891F8174707DC0073BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		37E891FA174707DC0073BE97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		37E891FC174707DC0073BE97 /* ucimusic147_2013-5-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ucimusic147_2013-5-Prefix.pch"; sourceTree = "<group>"; };
-		37E891FD174707DC0073BE97 /* SSoundAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSoundAppDelegate.h; sourceTree = "<group>"; };
-		37E891FE174707DC0073BE97 /* SSoundAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSoundAppDelegate.m; sourceTree = "<group>"; };
-		37E89200174707DC0073BE97 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		37E89202174707DC0073BE97 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		37E89204174707DC0073BE97 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		37E89207174707DC0073BE97 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		37E89209174707DC0073BE97 /* SSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSoundViewController.h; sourceTree = "<group>"; };
-		37E8920A174707DC0073BE97 /* SSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSoundViewController.m; sourceTree = "<group>"; };
-		37E892111747080C0073BE97 /* SSoundShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundShape.h; sourceTree = "<group>"; };
-		37E892121747080C0073BE97 /* SSoundShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundShape.m; sourceTree = "<group>"; };
-		37E892131747080C0073BE97 /* SSoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundView.h; sourceTree = "<group>"; };
-		37E892141747080C0073BE97 /* SSoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundView.m; sourceTree = "<group>"; };
+		040FD6A4174C6E3D009008C8 /* ucimusic147_2013-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ucimusic147_2013-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		040FD6A8174C6E3D009008C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		040FD6AA174C6E3D009008C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		040FD6AC174C6E3D009008C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		040FD6B0174C6E3D009008C8 /* ucimusic147_2013-5-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ucimusic147_2013-5-Info.plist"; sourceTree = "<group>"; };
+		040FD6B2174C6E3D009008C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		040FD6B4174C6E3D009008C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		040FD6B6174C6E3D009008C8 /* ucimusic147_2013-5-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ucimusic147_2013-5-Prefix.pch"; sourceTree = "<group>"; };
+		040FD6B7174C6E3D009008C8 /* SSoundAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSoundAppDelegate.h; sourceTree = "<group>"; };
+		040FD6B8174C6E3D009008C8 /* SSoundAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSoundAppDelegate.m; sourceTree = "<group>"; };
+		040FD6BB174C6E3D009008C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		040FD6BD174C6E3D009008C8 /* SSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSoundViewController.h; sourceTree = "<group>"; };
+		040FD6BE174C6E3D009008C8 /* SSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSoundViewController.m; sourceTree = "<group>"; };
+		040FD6C9174C6E98009008C8 /* SSoundShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundShape.h; sourceTree = "<group>"; };
+		040FD6CA174C6E98009008C8 /* SSoundShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundShape.m; sourceTree = "<group>"; };
+		040FD6CC174C6EA0009008C8 /* SSoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundView.h; sourceTree = "<group>"; };
+		040FD6CD174C6EA0009008C8 /* SSoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		37E891E8174707DC0073BE97 /* Frameworks */ = {
+		040FD6A1174C6E3D009008C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37E891EF174707DC0073BE97 /* UIKit.framework in Frameworks */,
-				37E891F1174707DC0073BE97 /* Foundation.framework in Frameworks */,
-				37E891F3174707DC0073BE97 /* CoreGraphics.framework in Frameworks */,
+				040FD6A9174C6E3D009008C8 /* UIKit.framework in Frameworks */,
+				040FD6AB174C6E3D009008C8 /* Foundation.framework in Frameworks */,
+				040FD6AD174C6E3D009008C8 /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37E891E2174707DB0073BE97 = {
+		040FD699174C6E3D009008C8 = {
 			isa = PBXGroup;
 			children = (
-				37E891F4174707DC0073BE97 /* ucimusic147_2013-5 */,
-				37E891ED174707DC0073BE97 /* Frameworks */,
-				37E891EC174707DC0073BE97 /* Products */,
+				040FD6AE174C6E3D009008C8 /* ucimusic147_2013-5 */,
+				040FD6A7174C6E3D009008C8 /* Frameworks */,
+				040FD6A5174C6E3D009008C8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		37E891EC174707DC0073BE97 /* Products */ = {
+		040FD6A5174C6E3D009008C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37E891EB174707DC0073BE97 /* ucimusic147_2013-5.app */,
+				040FD6A4174C6E3D009008C8 /* ucimusic147_2013-5.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		37E891ED174707DC0073BE97 /* Frameworks */ = {
+		040FD6A7174C6E3D009008C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				37E891EE174707DC0073BE97 /* UIKit.framework */,
-				37E891F0174707DC0073BE97 /* Foundation.framework */,
-				37E891F2174707DC0073BE97 /* CoreGraphics.framework */,
+				040FD6A8174C6E3D009008C8 /* UIKit.framework */,
+				040FD6AA174C6E3D009008C8 /* Foundation.framework */,
+				040FD6AC174C6E3D009008C8 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		37E891F4174707DC0073BE97 /* ucimusic147_2013-5 */ = {
+		040FD6AE174C6E3D009008C8 /* ucimusic147_2013-5 */ = {
 			isa = PBXGroup;
 			children = (
-				37E89206174707DC0073BE97 /* MainStoryboard.storyboard */,
-				37E891FD174707DC0073BE97 /* SSoundAppDelegate.h */,
-				37E891FE174707DC0073BE97 /* SSoundAppDelegate.m */,
-				37E892111747080C0073BE97 /* SSoundShape.h */,
-				37E892121747080C0073BE97 /* SSoundShape.m */,
-				37E89209174707DC0073BE97 /* SSoundViewController.h */,
-				37E8920A174707DC0073BE97 /* SSoundViewController.m */,
-				37E892131747080C0073BE97 /* SSoundView.h */,
-				37E892141747080C0073BE97 /* SSoundView.m */,
-				37E891F5174707DC0073BE97 /* Supporting Files */,
+				040FD6BA174C6E3D009008C8 /* MainStoryboard.storyboard */,
+				040FD6B7174C6E3D009008C8 /* SSoundAppDelegate.h */,
+				040FD6B8174C6E3D009008C8 /* SSoundAppDelegate.m */,
+				040FD6BD174C6E3D009008C8 /* SSoundViewController.h */,
+				040FD6BE174C6E3D009008C8 /* SSoundViewController.m */,
+				040FD6C9174C6E98009008C8 /* SSoundShape.h */,
+				040FD6CA174C6E98009008C8 /* SSoundShape.m */,
+				040FD6CC174C6EA0009008C8 /* SSoundView.h */,
+				040FD6CD174C6EA0009008C8 /* SSoundView.m */,
+				040FD6AF174C6E3D009008C8 /* Supporting Files */,
 			);
 			path = "ucimusic147_2013-5";
 			sourceTree = "<group>";
 		};
-		37E891F5174707DC0073BE97 /* Supporting Files */ = {
+		040FD6AF174C6E3D009008C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				37E891F6174707DC0073BE97 /* ucimusic147_2013-5-Info.plist */,
-				37E891F7174707DC0073BE97 /* InfoPlist.strings */,
-				37E891FA174707DC0073BE97 /* main.m */,
-				37E891FC174707DC0073BE97 /* ucimusic147_2013-5-Prefix.pch */,
-				37E89200174707DC0073BE97 /* Default.png */,
-				37E89202174707DC0073BE97 /* Default@2x.png */,
-				37E89204174707DC0073BE97 /* Default-568h@2x.png */,
+				040FD6B0174C6E3D009008C8 /* ucimusic147_2013-5-Info.plist */,
+				040FD6B1174C6E3D009008C8 /* InfoPlist.strings */,
+				040FD6B4174C6E3D009008C8 /* main.m */,
+				040FD6B6174C6E3D009008C8 /* ucimusic147_2013-5-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -120,13 +111,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		37E891EA174707DC0073BE97 /* ucimusic147_2013-5 */ = {
+		040FD6A3174C6E3D009008C8 /* ucimusic147_2013-5 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37E8920E174707DC0073BE97 /* Build configuration list for PBXNativeTarget "ucimusic147_2013-5" */;
+			buildConfigurationList = 040FD6C2174C6E3D009008C8 /* Build configuration list for PBXNativeTarget "ucimusic147_2013-5" */;
 			buildPhases = (
-				37E891E7174707DC0073BE97 /* Sources */,
-				37E891E8174707DC0073BE97 /* Frameworks */,
-				37E891E9174707DC0073BE97 /* Resources */,
+				040FD6A0174C6E3D009008C8 /* Sources */,
+				040FD6A1174C6E3D009008C8 /* Frameworks */,
+				040FD6A2174C6E3D009008C8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -134,79 +125,74 @@
 			);
 			name = "ucimusic147_2013-5";
 			productName = "ucimusic147_2013-5";
-			productReference = 37E891EB174707DC0073BE97 /* ucimusic147_2013-5.app */;
+			productReference = 040FD6A4174C6E3D009008C8 /* ucimusic147_2013-5.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		37E891E3174707DB0073BE97 /* Project object */ = {
+		040FD69B174C6E3D009008C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = SSound;
-				LastUpgradeCheck = 0460;
-				ORGANIZATIONNAME = "Group 5 MUS147";
+				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = 37E891E6174707DB0073BE97 /* Build configuration list for PBXProject "ucimusic147_2013-5" */;
+			buildConfigurationList = 040FD69E174C6E3D009008C8 /* Build configuration list for PBXProject "ucimusic147_2013-5" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 37E891E2174707DB0073BE97;
-			productRefGroup = 37E891EC174707DC0073BE97 /* Products */;
+			mainGroup = 040FD699174C6E3D009008C8;
+			productRefGroup = 040FD6A5174C6E3D009008C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37E891EA174707DC0073BE97 /* ucimusic147_2013-5 */,
+				040FD6A3174C6E3D009008C8 /* ucimusic147_2013-5 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		37E891E9174707DC0073BE97 /* Resources */ = {
+		040FD6A2174C6E3D009008C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37E891F9174707DC0073BE97 /* InfoPlist.strings in Resources */,
-				37E89201174707DC0073BE97 /* Default.png in Resources */,
-				37E89203174707DC0073BE97 /* Default@2x.png in Resources */,
-				37E89205174707DC0073BE97 /* Default-568h@2x.png in Resources */,
-				37E89208174707DC0073BE97 /* MainStoryboard.storyboard in Resources */,
+				040FD6B3174C6E3D009008C8 /* InfoPlist.strings in Resources */,
+				040FD6BC174C6E3D009008C8 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		37E891E7174707DC0073BE97 /* Sources */ = {
+		040FD6A0174C6E3D009008C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37E891FB174707DC0073BE97 /* main.m in Sources */,
-				37E891FF174707DC0073BE97 /* SSoundAppDelegate.m in Sources */,
-				37E8920B174707DC0073BE97 /* SSoundViewController.m in Sources */,
-				37E892151747080C0073BE97 /* SSoundShape.m in Sources */,
-				37E892161747080C0073BE97 /* SSoundView.m in Sources */,
+				040FD6B5174C6E3D009008C8 /* main.m in Sources */,
+				040FD6B9174C6E3D009008C8 /* SSoundAppDelegate.m in Sources */,
+				040FD6BF174C6E3D009008C8 /* SSoundViewController.m in Sources */,
+				040FD6CB174C6E98009008C8 /* SSoundShape.m in Sources */,
+				040FD6CE174C6EA0009008C8 /* SSoundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		37E891F7174707DC0073BE97 /* InfoPlist.strings */ = {
+		040FD6B1174C6E3D009008C8 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				37E891F8174707DC0073BE97 /* en */,
+				040FD6B2174C6E3D009008C8 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		37E89206174707DC0073BE97 /* MainStoryboard.storyboard */ = {
+		040FD6BA174C6E3D009008C8 /* MainStoryboard.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				37E89207174707DC0073BE97 /* en */,
+				040FD6BB174C6E3D009008C8 /* en */,
 			);
 			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
@@ -214,18 +200,12 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		37E8920C174707DC0073BE97 /* Debug */ = {
+		040FD6C0174C6E3D009008C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -236,41 +216,36 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
-				ONLY_ACTIVE_ARCH = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
-		37E8920D174707DC0073BE97 /* Release */ = {
+		040FD6C1174C6E3D009008C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		37E8920F174707DC0073BE97 /* Debug */ = {
+		040FD6C3174C6E3D009008C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -281,7 +256,7 @@
 			};
 			name = Debug;
 		};
-		37E89210174707DC0073BE97 /* Release */ = {
+		040FD6C4174C6E3D009008C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -295,25 +270,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37E891E6174707DB0073BE97 /* Build configuration list for PBXProject "ucimusic147_2013-5" */ = {
+		040FD69E174C6E3D009008C8 /* Build configuration list for PBXProject "ucimusic147_2013-5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37E8920C174707DC0073BE97 /* Debug */,
-				37E8920D174707DC0073BE97 /* Release */,
+				040FD6C0174C6E3D009008C8 /* Debug */,
+				040FD6C1174C6E3D009008C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37E8920E174707DC0073BE97 /* Build configuration list for PBXNativeTarget "ucimusic147_2013-5" */ = {
+		040FD6C2174C6E3D009008C8 /* Build configuration list for PBXNativeTarget "ucimusic147_2013-5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				37E8920F174707DC0073BE97 /* Debug */,
-				37E89210174707DC0073BE97 /* Release */,
+				040FD6C3174C6E3D009008C8 /* Debug */,
+				040FD6C4174C6E3D009008C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 37E891E3174707DB0073BE97 /* Project object */;
+	rootObject = 040FD69B174C6E3D009008C8 /* Project object */;
 }
