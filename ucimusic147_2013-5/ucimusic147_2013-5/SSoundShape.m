@@ -15,7 +15,7 @@
 @synthesize sHeight;
 
 -(CGRect)makeShape {
-    return CGRectMake(self.sPoint.x, self.sPoint.y, self.sWidth, self.sHeight);
+    return CGRectMake(self.sPoint.x, self.sPoint.y, self.sWidth, self.sHeight); //returns a rectangle
 }
 
 @end

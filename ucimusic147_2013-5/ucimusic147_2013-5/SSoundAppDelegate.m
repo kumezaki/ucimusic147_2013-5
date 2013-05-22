@@ -12,9 +12,11 @@
 
 @synthesize window = _window;
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    application.applicationSupportsShakeToEdit = YES;
     return YES;
 }
 							

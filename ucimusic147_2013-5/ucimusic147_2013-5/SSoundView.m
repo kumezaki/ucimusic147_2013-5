@@ -10,21 +10,22 @@
 
 @implementation SSoundView
 
+
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Initialization code
-        totalSoundShapes = [[NSMutableArray alloc] init];
+        totalSoundShapes = [[NSMutableArray alloc] init]; // initialized array
         self.backgroundColor = [UIColor blackColor];
         uciBlueColor = [UIColor colorWithRed:0./255. green:34./255. blue:68./255. alpha:1.];
         uciGoldColor = [UIColor colorWithRed:255./255. green:222./255. blue:108./255. alpha:1.];
         
         // Create the playhead
-        playhead = [[SSoundShape alloc] init];
+        playhead = [[SSoundShape alloc] init]; 
         playhead.sPoint = CGPointMake(0, 0);
         playhead.sWidth = 400;
-        playhead.sHeight = 10;
-        [totalSoundShapes addObject:playhead];
+        playhead.sHeight = 5;
+        [totalSoundShapes addObject:playhead]; // pushing it into the array
     }
     return self;
 }
@@ -108,4 +109,17 @@
 }
 
 
+// Adding motion, so that when the user shakes the device, all the objects will be deleted. 
+
+-(void)Shake
+{
+    [totalSoundShapes removeAllObjects];
+    [totalSoundShapes addObject:playhead]; // adds the playhead back, because it gets deleted in the removeAllObjects
+    [self setNeedsDisplay];
+    
+}
+    
+
+
 @end
+

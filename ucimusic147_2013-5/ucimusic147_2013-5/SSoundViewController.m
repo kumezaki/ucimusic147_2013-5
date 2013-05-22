@@ -9,6 +9,7 @@
 #import "SSoundViewController.h"
 
 @implementation SSoundViewController
+@synthesize Sview;
 
 - (void)didReceiveMemoryWarning
 {
@@ -26,6 +27,7 @@
 
 - (void)viewDidUnload
 {
+    [self setSview:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -34,16 +36,19 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    [self becomeFirstResponder];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+    [self resignFirstResponder];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -55,6 +60,20 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (BOOL)canBecomeFirstResponder // To detect the shake
+{
+    return YES;
+}
+
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        [Sview Shake];
+    
+    }
 }
 
 @end

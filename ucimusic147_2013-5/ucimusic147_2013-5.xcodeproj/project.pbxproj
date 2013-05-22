@@ -286,6 +286,7 @@
 				040FD6C4174C6E3D009008C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

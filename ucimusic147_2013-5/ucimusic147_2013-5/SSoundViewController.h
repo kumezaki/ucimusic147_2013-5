@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SSoundView.h"
 
 @interface SSoundViewController : UIViewController
+@property (weak, nonatomic) IBOutlet SSoundView *Sview;
 
 @end
