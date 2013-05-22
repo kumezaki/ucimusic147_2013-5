@@ -90,7 +90,7 @@
         playhead.sPoint = CGPointMake(playhead.sPoint.x, 0);
     }
     
-    // Loop through the shapes and Draw each to the view
+    // Loop through the shapes and draw each to the view
     for (SSoundShape *shape in totalSoundShapes) {
         // Draw shape
         CGRect shape1 = shape.makeShape;
@@ -101,18 +101,15 @@
         CGContextFillRect(context, shape1);
         
         // Handle shape collision with playhead
-        if(CGRectIntersectsRect(shape1, playhead.makeShape)) {
+        if(shape != playhead && CGRectIntersectsRect(shape1, playhead.makeShape)) {
             [[UIColor redColor] set];
             CGContextFillRect(context, shape1);
         }
     }
 }
 
-
-// Adding motion, so that when the user shakes the device, all the objects will be deleted. 
-
--(void)Shake
-{
+// Remove all the shape objects on phone shake 
+-(void)shake {
     [totalSoundShapes removeAllObjects];
     [totalSoundShapes addObject:playhead]; // adds the playhead back, because it gets deleted in the removeAllObjects
     [self setNeedsDisplay];

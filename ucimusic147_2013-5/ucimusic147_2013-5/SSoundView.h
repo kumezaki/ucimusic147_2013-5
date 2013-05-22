@@ -11,10 +11,10 @@
 
 @interface SSoundView : UIView {
     UITouch* touch;
-    int pX; // initial point
-    int pY; // initial point
-    int dpX; // end point
-    int dpY; // end point
+    int pX;   // Initial point
+    int pY; 
+    int dpX;  // End point
+    int dpY;
     
     NSMutableArray *totalSoundShapes; // Dynamically changing array that stores our shapes
     SSoundShape *playhead; 
@@ -24,16 +24,17 @@
     
 }
 
-//Touch Methods
-
+// Touch Methods
 -(void)doTouchesOn:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)doTouchesOff:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event;
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
+
+// Draw and Accelerometer methods 
 -(void)drawSoundShape;
--(void)Shake;
+-(void)shake;
 
 
 

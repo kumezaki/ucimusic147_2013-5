@@ -37,6 +37,16 @@
 		040FD6CA174C6E98009008C8 /* SSoundShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundShape.m; sourceTree = "<group>"; };
 		040FD6CC174C6EA0009008C8 /* SSoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundView.h; sourceTree = "<group>"; };
 		040FD6CD174C6EA0009008C8 /* SSoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundView.m; sourceTree = "<group>"; };
+		37EE0BA0174D67D000DA934F /* MUS147AQPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147AQPlayer.h; sourceTree = "<group>"; };
+		37EE0BA1174D67D000DA934F /* MUS147AQPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147AQPlayer.m; sourceTree = "<group>"; };
+		37EE0BA2174D686D00DA934F /* MUS147Voice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147Voice.h; sourceTree = "<group>"; };
+		37EE0BA3174D686D00DA934F /* MUS147Voice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147Voice.m; sourceTree = "<group>"; };
+		37EE0BA4174D6A9000DA934F /* MUS147Sequence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147Sequence.h; sourceTree = "<group>"; };
+		37EE0BA5174D6A9000DA934F /* MUS147Sequence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147Sequence.m; sourceTree = "<group>"; };
+		37EE0BA6174D6A9000DA934F /* MUS147Sequencer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147Sequencer.h; sourceTree = "<group>"; };
+		37EE0BA7174D6A9000DA934F /* MUS147Sequencer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147Sequencer.m; sourceTree = "<group>"; };
+		37EE0BA8174D6CB200DA934F /* MUS147Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147Event.h; sourceTree = "<group>"; };
+		37EE0BA9174D6CB200DA934F /* MUS147Event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147Event.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,16 @@
 			isa = PBXGroup;
 			children = (
 				040FD6BA174C6E3D009008C8 /* MainStoryboard.storyboard */,
+				37EE0BA0174D67D000DA934F /* MUS147AQPlayer.h */,
+				37EE0BA1174D67D000DA934F /* MUS147AQPlayer.m */,
+				37EE0BA8174D6CB200DA934F /* MUS147Event.h */,
+				37EE0BA9174D6CB200DA934F /* MUS147Event.m */,
+				37EE0BA4174D6A9000DA934F /* MUS147Sequence.h */,
+				37EE0BA5174D6A9000DA934F /* MUS147Sequence.m */,
+				37EE0BA6174D6A9000DA934F /* MUS147Sequencer.h */,
+				37EE0BA7174D6A9000DA934F /* MUS147Sequencer.m */,
+				37EE0BA2174D686D00DA934F /* MUS147Voice.h */,
+				37EE0BA3174D686D00DA934F /* MUS147Voice.m */,
 				040FD6B7174C6E3D009008C8 /* SSoundAppDelegate.h */,
 				040FD6B8174C6E3D009008C8 /* SSoundAppDelegate.m */,
 				040FD6BD174C6E3D009008C8 /* SSoundViewController.h */,
