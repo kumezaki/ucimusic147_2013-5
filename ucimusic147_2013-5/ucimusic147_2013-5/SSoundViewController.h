@@ -11,7 +11,7 @@
 
 @interface SSoundViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet SSoundView *sView;
+@property (strong, nonatomic) IBOutlet SSoundView *sView;
 
 
 @end
