@@ -7,123 +7,103 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040FD6A9174C6E3D009008C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040FD6A8174C6E3D009008C8 /* UIKit.framework */; };
-		040FD6AB174C6E3D009008C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040FD6AA174C6E3D009008C8 /* Foundation.framework */; };
-		040FD6AD174C6E3D009008C8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 040FD6AC174C6E3D009008C8 /* CoreGraphics.framework */; };
-		040FD6B3174C6E3D009008C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 040FD6B1174C6E3D009008C8 /* InfoPlist.strings */; };
-		040FD6B5174C6E3D009008C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6B4174C6E3D009008C8 /* main.m */; };
-		040FD6B9174C6E3D009008C8 /* SSoundAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6B8174C6E3D009008C8 /* SSoundAppDelegate.m */; };
-		040FD6BC174C6E3D009008C8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040FD6BA174C6E3D009008C8 /* MainStoryboard.storyboard */; };
-		040FD6BF174C6E3D009008C8 /* SSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6BE174C6E3D009008C8 /* SSoundViewController.m */; };
-		040FD6CB174C6E98009008C8 /* SSoundShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6CA174C6E98009008C8 /* SSoundShape.m */; };
-		040FD6CE174C6EA0009008C8 /* SSoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 040FD6CD174C6EA0009008C8 /* SSoundView.m */; };
+		04EA1361174D96E50037541F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA1360174D96E50037541F /* UIKit.framework */; };
+		04EA1363174D96E50037541F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA1362174D96E50037541F /* Foundation.framework */; };
+		04EA1365174D96E50037541F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04EA1364174D96E50037541F /* CoreGraphics.framework */; };
+		04EA136B174D96E50037541F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04EA1369174D96E50037541F /* InfoPlist.strings */; };
+		04EA136D174D96E50037541F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA136C174D96E50037541F /* main.m */; };
+		04EA1371174D96E50037541F /* SSoundAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1370174D96E50037541F /* SSoundAppDelegate.m */; };
+		04EA1374174D96E50037541F /* SSoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1373174D96E50037541F /* SSoundViewController.m */; };
+		04EA1377174D96E50037541F /* SSoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04EA1375174D96E50037541F /* SSoundViewController.xib */; };
+		04EA1387174D98CE0037541F /* SSoundShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1384174D98CE0037541F /* SSoundShape.m */; };
+		04EA1388174D98CE0037541F /* SSoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1386174D98CE0037541F /* SSoundView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		040FD6A4174C6E3D009008C8 /* ucimusic147_2013-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ucimusic147_2013-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		040FD6A8174C6E3D009008C8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		040FD6AA174C6E3D009008C8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		040FD6AC174C6E3D009008C8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		040FD6B0174C6E3D009008C8 /* ucimusic147_2013-5-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ucimusic147_2013-5-Info.plist"; sourceTree = "<group>"; };
-		040FD6B2174C6E3D009008C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		040FD6B4174C6E3D009008C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		040FD6B6174C6E3D009008C8 /* ucimusic147_2013-5-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ucimusic147_2013-5-Prefix.pch"; sourceTree = "<group>"; };
-		040FD6B7174C6E3D009008C8 /* SSoundAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSoundAppDelegate.h; sourceTree = "<group>"; };
-		040FD6B8174C6E3D009008C8 /* SSoundAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSoundAppDelegate.m; sourceTree = "<group>"; };
-		040FD6BB174C6E3D009008C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		040FD6BD174C6E3D009008C8 /* SSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSoundViewController.h; sourceTree = "<group>"; };
-		040FD6BE174C6E3D009008C8 /* SSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSoundViewController.m; sourceTree = "<group>"; };
-		040FD6C9174C6E98009008C8 /* SSoundShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundShape.h; sourceTree = "<group>"; };
-		040FD6CA174C6E98009008C8 /* SSoundShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundShape.m; sourceTree = "<group>"; };
-		040FD6CC174C6EA0009008C8 /* SSoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundView.h; sourceTree = "<group>"; };
-		040FD6CD174C6EA0009008C8 /* SSoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundView.m; sourceTree = "<group>"; };
-		37EE0BA0174D67D000DA934F /* MUS147AQPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147AQPlayer.h; sourceTree = "<group>"; };
-		37EE0BA1174D67D000DA934F /* MUS147AQPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147AQPlayer.m; sourceTree = "<group>"; };
-		37EE0BA2174D686D00DA934F /* MUS147Voice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147Voice.h; sourceTree = "<group>"; };
-		37EE0BA3174D686D00DA934F /* MUS147Voice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147Voice.m; sourceTree = "<group>"; };
-		37EE0BA4174D6A9000DA934F /* MUS147Sequence.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147Sequence.h; sourceTree = "<group>"; };
-		37EE0BA5174D6A9000DA934F /* MUS147Sequence.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147Sequence.m; sourceTree = "<group>"; };
-		37EE0BA6174D6A9000DA934F /* MUS147Sequencer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147Sequencer.h; sourceTree = "<group>"; };
-		37EE0BA7174D6A9000DA934F /* MUS147Sequencer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147Sequencer.m; sourceTree = "<group>"; };
-		37EE0BA8174D6CB200DA934F /* MUS147Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUS147Event.h; sourceTree = "<group>"; };
-		37EE0BA9174D6CB200DA934F /* MUS147Event.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUS147Event.m; sourceTree = "<group>"; };
+		04EA135C174D96E50037541F /* ucimusic147_2013-5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ucimusic147_2013-5.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04EA1360174D96E50037541F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		04EA1362174D96E50037541F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		04EA1364174D96E50037541F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		04EA1368174D96E50037541F /* ucimusic147_2013-5-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ucimusic147_2013-5-Info.plist"; sourceTree = "<group>"; };
+		04EA136A174D96E50037541F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04EA136C174D96E50037541F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04EA136E174D96E50037541F /* ucimusic147_2013-5-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ucimusic147_2013-5-Prefix.pch"; sourceTree = "<group>"; };
+		04EA136F174D96E50037541F /* SSoundAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSoundAppDelegate.h; sourceTree = "<group>"; };
+		04EA1370174D96E50037541F /* SSoundAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSoundAppDelegate.m; sourceTree = "<group>"; };
+		04EA1372174D96E50037541F /* SSoundViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSoundViewController.h; sourceTree = "<group>"; };
+		04EA1373174D96E50037541F /* SSoundViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSoundViewController.m; sourceTree = "<group>"; };
+		04EA1376174D96E50037541F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SSoundViewController.xib; sourceTree = "<group>"; };
+		04EA1383174D98CE0037541F /* SSoundShape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundShape.h; sourceTree = "<group>"; };
+		04EA1384174D98CE0037541F /* SSoundShape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundShape.m; sourceTree = "<group>"; };
+		04EA1385174D98CE0037541F /* SSoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundView.h; sourceTree = "<group>"; };
+		04EA1386174D98CE0037541F /* SSoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		040FD6A1174C6E3D009008C8 /* Frameworks */ = {
+		04EA1359174D96E50037541F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040FD6A9174C6E3D009008C8 /* UIKit.framework in Frameworks */,
-				040FD6AB174C6E3D009008C8 /* Foundation.framework in Frameworks */,
-				040FD6AD174C6E3D009008C8 /* CoreGraphics.framework in Frameworks */,
+				04EA1361174D96E50037541F /* UIKit.framework in Frameworks */,
+				04EA1363174D96E50037541F /* Foundation.framework in Frameworks */,
+				04EA1365174D96E50037541F /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		040FD699174C6E3D009008C8 = {
+		04EA1351174D96E50037541F = {
 			isa = PBXGroup;
 			children = (
-				040FD6AE174C6E3D009008C8 /* ucimusic147_2013-5 */,
-				040FD6A7174C6E3D009008C8 /* Frameworks */,
-				040FD6A5174C6E3D009008C8 /* Products */,
+				04EA1366174D96E50037541F /* ucimusic147_2013-5 */,
+				04EA135F174D96E50037541F /* Frameworks */,
+				04EA135D174D96E50037541F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		040FD6A5174C6E3D009008C8 /* Products */ = {
+		04EA135D174D96E50037541F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				040FD6A4174C6E3D009008C8 /* ucimusic147_2013-5.app */,
+				04EA135C174D96E50037541F /* ucimusic147_2013-5.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		040FD6A7174C6E3D009008C8 /* Frameworks */ = {
+		04EA135F174D96E50037541F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				040FD6A8174C6E3D009008C8 /* UIKit.framework */,
-				040FD6AA174C6E3D009008C8 /* Foundation.framework */,
-				040FD6AC174C6E3D009008C8 /* CoreGraphics.framework */,
+				04EA1360174D96E50037541F /* UIKit.framework */,
+				04EA1362174D96E50037541F /* Foundation.framework */,
+				04EA1364174D96E50037541F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		040FD6AE174C6E3D009008C8 /* ucimusic147_2013-5 */ = {
+		04EA1366174D96E50037541F /* ucimusic147_2013-5 */ = {
 			isa = PBXGroup;
 			children = (
-				040FD6BA174C6E3D009008C8 /* MainStoryboard.storyboard */,
-				37EE0BA0174D67D000DA934F /* MUS147AQPlayer.h */,
-				37EE0BA1174D67D000DA934F /* MUS147AQPlayer.m */,
-				37EE0BA8174D6CB200DA934F /* MUS147Event.h */,
-				37EE0BA9174D6CB200DA934F /* MUS147Event.m */,
-				37EE0BA4174D6A9000DA934F /* MUS147Sequence.h */,
-				37EE0BA5174D6A9000DA934F /* MUS147Sequence.m */,
-				37EE0BA6174D6A9000DA934F /* MUS147Sequencer.h */,
-				37EE0BA7174D6A9000DA934F /* MUS147Sequencer.m */,
-				37EE0BA2174D686D00DA934F /* MUS147Voice.h */,
-				37EE0BA3174D686D00DA934F /* MUS147Voice.m */,
-				040FD6B7174C6E3D009008C8 /* SSoundAppDelegate.h */,
-				040FD6B8174C6E3D009008C8 /* SSoundAppDelegate.m */,
-				040FD6BD174C6E3D009008C8 /* SSoundViewController.h */,
-				040FD6BE174C6E3D009008C8 /* SSoundViewController.m */,
-				040FD6C9174C6E98009008C8 /* SSoundShape.h */,
-				040FD6CA174C6E98009008C8 /* SSoundShape.m */,
-				040FD6CC174C6EA0009008C8 /* SSoundView.h */,
-				040FD6CD174C6EA0009008C8 /* SSoundView.m */,
-				040FD6AF174C6E3D009008C8 /* Supporting Files */,
+				04EA136F174D96E50037541F /* SSoundAppDelegate.h */,
+				04EA1370174D96E50037541F /* SSoundAppDelegate.m */,
+				04EA1372174D96E50037541F /* SSoundViewController.h */,
+				04EA1373174D96E50037541F /* SSoundViewController.m */,
+				04EA1375174D96E50037541F /* SSoundViewController.xib */,
+				04EA1383174D98CE0037541F /* SSoundShape.h */,
+				04EA1384174D98CE0037541F /* SSoundShape.m */,
+				04EA1385174D98CE0037541F /* SSoundView.h */,
+				04EA1386174D98CE0037541F /* SSoundView.m */,
+				04EA1367174D96E50037541F /* Supporting Files */,
 			);
 			path = "ucimusic147_2013-5";
 			sourceTree = "<group>";
 		};
-		040FD6AF174C6E3D009008C8 /* Supporting Files */ = {
+		04EA1367174D96E50037541F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				040FD6B0174C6E3D009008C8 /* ucimusic147_2013-5-Info.plist */,
-				040FD6B1174C6E3D009008C8 /* InfoPlist.strings */,
-				040FD6B4174C6E3D009008C8 /* main.m */,
-				040FD6B6174C6E3D009008C8 /* ucimusic147_2013-5-Prefix.pch */,
+				04EA1368174D96E50037541F /* ucimusic147_2013-5-Info.plist */,
+				04EA1369174D96E50037541F /* InfoPlist.strings */,
+				04EA136C174D96E50037541F /* main.m */,
+				04EA136E174D96E50037541F /* ucimusic147_2013-5-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,13 +111,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		040FD6A3174C6E3D009008C8 /* ucimusic147_2013-5 */ = {
+		04EA135B174D96E50037541F /* ucimusic147_2013-5 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 040FD6C2174C6E3D009008C8 /* Build configuration list for PBXNativeTarget "ucimusic147_2013-5" */;
+			buildConfigurationList = 04EA137A174D96E50037541F /* Build configuration list for PBXNativeTarget "ucimusic147_2013-5" */;
 			buildPhases = (
-				040FD6A0174C6E3D009008C8 /* Sources */,
-				040FD6A1174C6E3D009008C8 /* Frameworks */,
-				040FD6A2174C6E3D009008C8 /* Resources */,
+				04EA1358174D96E50037541F /* Sources */,
+				04EA1359174D96E50037541F /* Frameworks */,
+				04EA135A174D96E50037541F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -145,82 +125,82 @@
 			);
 			name = "ucimusic147_2013-5";
 			productName = "ucimusic147_2013-5";
-			productReference = 040FD6A4174C6E3D009008C8 /* ucimusic147_2013-5.app */;
+			productReference = 04EA135C174D96E50037541F /* ucimusic147_2013-5.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		040FD69B174C6E3D009008C8 /* Project object */ = {
+		04EA1353174D96E50037541F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0420;
 			};
-			buildConfigurationList = 040FD69E174C6E3D009008C8 /* Build configuration list for PBXProject "ucimusic147_2013-5" */;
+			buildConfigurationList = 04EA1356174D96E50037541F /* Build configuration list for PBXProject "ucimusic147_2013-5" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 040FD699174C6E3D009008C8;
-			productRefGroup = 040FD6A5174C6E3D009008C8 /* Products */;
+			mainGroup = 04EA1351174D96E50037541F;
+			productRefGroup = 04EA135D174D96E50037541F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				040FD6A3174C6E3D009008C8 /* ucimusic147_2013-5 */,
+				04EA135B174D96E50037541F /* ucimusic147_2013-5 */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		040FD6A2174C6E3D009008C8 /* Resources */ = {
+		04EA135A174D96E50037541F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040FD6B3174C6E3D009008C8 /* InfoPlist.strings in Resources */,
-				040FD6BC174C6E3D009008C8 /* MainStoryboard.storyboard in Resources */,
+				04EA136B174D96E50037541F /* InfoPlist.strings in Resources */,
+				04EA1377174D96E50037541F /* SSoundViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		040FD6A0174C6E3D009008C8 /* Sources */ = {
+		04EA1358174D96E50037541F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				040FD6B5174C6E3D009008C8 /* main.m in Sources */,
-				040FD6B9174C6E3D009008C8 /* SSoundAppDelegate.m in Sources */,
-				040FD6BF174C6E3D009008C8 /* SSoundViewController.m in Sources */,
-				040FD6CB174C6E98009008C8 /* SSoundShape.m in Sources */,
-				040FD6CE174C6EA0009008C8 /* SSoundView.m in Sources */,
+				04EA136D174D96E50037541F /* main.m in Sources */,
+				04EA1371174D96E50037541F /* SSoundAppDelegate.m in Sources */,
+				04EA1374174D96E50037541F /* SSoundViewController.m in Sources */,
+				04EA1387174D98CE0037541F /* SSoundShape.m in Sources */,
+				04EA1388174D98CE0037541F /* SSoundView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		040FD6B1174C6E3D009008C8 /* InfoPlist.strings */ = {
+		04EA1369174D96E50037541F /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				040FD6B2174C6E3D009008C8 /* en */,
+				04EA136A174D96E50037541F /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		040FD6BA174C6E3D009008C8 /* MainStoryboard.storyboard */ = {
+		04EA1375174D96E50037541F /* SSoundViewController.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				040FD6BB174C6E3D009008C8 /* en */,
+				04EA1376174D96E50037541F /* en */,
 			);
-			name = MainStoryboard.storyboard;
+			name = SSoundViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		040FD6C0174C6E3D009008C8 /* Debug */ = {
+		04EA1378174D96E50037541F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -245,7 +225,7 @@
 			};
 			name = Debug;
 		};
-		040FD6C1174C6E3D009008C8 /* Release */ = {
+		04EA1379174D96E50037541F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -265,7 +245,7 @@
 			};
 			name = Release;
 		};
-		040FD6C3174C6E3D009008C8 /* Debug */ = {
+		04EA137B174D96E50037541F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -276,7 +256,7 @@
 			};
 			name = Debug;
 		};
-		040FD6C4174C6E3D009008C8 /* Release */ = {
+		04EA137C174D96E50037541F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -290,25 +270,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		040FD69E174C6E3D009008C8 /* Build configuration list for PBXProject "ucimusic147_2013-5" */ = {
+		04EA1356174D96E50037541F /* Build configuration list for PBXProject "ucimusic147_2013-5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				040FD6C0174C6E3D009008C8 /* Debug */,
-				040FD6C1174C6E3D009008C8 /* Release */,
+				04EA1378174D96E50037541F /* Debug */,
+				04EA1379174D96E50037541F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		040FD6C2174C6E3D009008C8 /* Build configuration list for PBXNativeTarget "ucimusic147_2013-5" */ = {
+		04EA137A174D96E50037541F /* Build configuration list for PBXNativeTarget "ucimusic147_2013-5" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				040FD6C3174C6E3D009008C8 /* Debug */,
-				040FD6C4174C6E3D009008C8 /* Release */,
+				04EA137B174D96E50037541F /* Debug */,
+				04EA137C174D96E50037541F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 040FD69B174C6E3D009008C8 /* Project object */;
+	rootObject = 04EA1353174D96E50037541F /* Project object */;
 }

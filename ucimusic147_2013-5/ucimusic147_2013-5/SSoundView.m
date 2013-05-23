@@ -113,7 +113,6 @@
     [totalSoundShapes removeAllObjects];
     [totalSoundShapes addObject:playhead]; // adds the playhead back, because it gets deleted in the removeAllObjects
     [self setNeedsDisplay];
-    
 }
     
 

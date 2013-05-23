@@ -2,24 +2,29 @@
 //  SSoundAppDelegate.m
 //  ucimusic147_2013-5
 //
-//  Created by Lab User on 5/21/13.
+//  Created by Lab User on 5/22/13.
 //  Copyright (c) 2013 __MyCompanyName__. All rights reserved.
 //
 
 #import "SSoundAppDelegate.h"
 
+#import "SSoundViewController.h"
+
 @implementation SSoundAppDelegate
 
 @synthesize window = _window;
-
+@synthesize viewController = _viewController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    application.applicationSupportsShakeToEdit = YES;
+    self.viewController = [[SSoundViewController alloc] initWithNibName:@"SSoundViewController" bundle:nil];
+    self.window.rootViewController = self.viewController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*

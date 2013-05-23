@@ -13,7 +13,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "040FD6A3174C6E3D009008C8"
+               BlueprintIdentifier = "04EA135B174D96E50037541F"
                BuildableName = "ucimusic147_2013-5.app"
                BlueprintName = "ucimusic147_2013-5"
                ReferencedContainer = "container:ucimusic147_2013-5.xcodeproj">
@@ -31,7 +31,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "040FD6A3174C6E3D009008C8"
+            BlueprintIdentifier = "04EA135B174D96E50037541F"
             BuildableName = "ucimusic147_2013-5.app"
             BlueprintName = "ucimusic147_2013-5"
             ReferencedContainer = "container:ucimusic147_2013-5.xcodeproj">
@@ -49,7 +49,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "040FD6A3174C6E3D009008C8"
+            BlueprintIdentifier = "04EA135B174D96E50037541F"
             BuildableName = "ucimusic147_2013-5.app"
             BlueprintName = "ucimusic147_2013-5"
             ReferencedContainer = "container:ucimusic147_2013-5.xcodeproj">
@@ -67,7 +67,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "040FD6A3174C6E3D009008C8"
+            BlueprintIdentifier = "04EA135B174D96E50037541F"
             BuildableName = "ucimusic147_2013-5.app"
             BlueprintName = "ucimusic147_2013-5"
             ReferencedContainer = "container:ucimusic147_2013-5.xcodeproj">
