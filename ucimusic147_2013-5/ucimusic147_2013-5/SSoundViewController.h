@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "SSoundView.h"
 
-@interface SSoundViewController : UIViewController
+@interface SSoundViewController : UIViewController {
+    NSTimer* updateTimer;
+}
 
 @property (strong, nonatomic) IBOutlet SSoundView *sView;
+
+- (IBAction)BPM:(UISlider *)sender;
+- (IBAction)Pause:(UIButton *)sender;
 
 
 @end

@@ -7,6 +7,8 @@
 //
 
 #import "SSoundViewController.h"
+#import "MUS147AQPlayer.h"
+extern MUS147AQPlayer* aqp;
 
 @implementation SSoundViewController
 @synthesize sView;
@@ -23,6 +25,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
 }
 
 - (void)viewDidUnload
@@ -72,4 +75,20 @@
     }
 }
 
+- (IBAction)BPM:(UISlider *)sender {
+    [updateTimer invalidate];
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
+    [aqp.sequencer setBpm:sender.value];
+    NSLog(@"bpm: %f", sender.value);
+    NSLog(@"timeInterval: %f",updateTimer.timeInterval);
+}
+
+- (IBAction)Pause:(UIButton *)sender {
+    if(aqp.sequencer.playing) {
+        [aqp.sequencer stop];
+        [aqp.sequencer rewind];
+    }
+    else
+        [aqp.sequencer play];
+}
 @end

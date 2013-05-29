@@ -10,6 +10,9 @@
 
 #import "SSoundViewController.h"
 
+#import "MUS147AQPlayer.h"
+extern MUS147AQPlayer* aqp;
+
 @implementation SSoundAppDelegate
 
 @synthesize window = _window;
@@ -22,6 +25,7 @@
     self.viewController = [[SSoundViewController alloc] initWithNibName:@"SSoundViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    aqp = [[MUS147AQPlayer alloc] init];
     return YES;
 }
 

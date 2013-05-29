@@ -7,6 +7,9 @@
 //
 
 #import "SSoundView.h"
+#import "MUS147Event_Touch.h"
+#import "MUS147AQPlayer.h"
+extern MUS147AQPlayer* aqp;
 
 @implementation SSoundView
 
@@ -85,7 +88,6 @@
     CGContextSetLineWidth(context, 3.0);
     
     // Reset playhead position (currently the playhead isn't driven by the sequencer just clicks)
-    playhead.sPoint = CGPointMake(playhead.sPoint.x, playhead.sPoint.y + 5);
     if(playhead.sPoint.y > self.bounds.size.height) {
         playhead.sPoint = CGPointMake(playhead.sPoint.x, 0);
     }
@@ -104,6 +106,8 @@
         if(shape != playhead && CGRectIntersectsRect(shape1, playhead.makeShape)) {
             [[UIColor redColor] set];
             CGContextFillRect(context, shape1);
+            [aqp getSynthVoice].amp = [MUS147Event_Touch yToAmp:shape.sHeight/self.bounds.size.height];
+            [aqp getSynthVoice].freq = [MUS147Event_Touch xToFreq:shape.sWidth/self.bounds.size.width];
         }
     }
 }
@@ -112,6 +116,11 @@
 -(void)shake {
     [totalSoundShapes removeAllObjects];
     [totalSoundShapes addObject:playhead]; // adds the playhead back, because it gets deleted in the removeAllObjects
+    [self setNeedsDisplay];
+}
+
+-(void)updatePlayhead {
+    playhead.sPoint = CGPointMake(playhead.sPoint.x, playhead.sPoint.y + 1);
     [self setNeedsDisplay];
 }
     

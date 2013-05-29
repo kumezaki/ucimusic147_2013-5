@@ -35,6 +35,7 @@
 // Draw and Accelerometer methods 
 -(void)drawSoundShape;
 -(void)shake;
+-(void)updatePlayhead;
 
 
 
