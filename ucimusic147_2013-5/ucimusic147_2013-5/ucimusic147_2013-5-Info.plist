@@ -11,7 +11,7 @@
 	<key>CFBundleIconFiles</key>
 	<array/>
 	<key>CFBundleIdentifier</key>
-	<string>uci.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>edu.uci.arts.music.music147</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -28,7 +28,7 @@
 	<true/>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
-		<string>armv7</string>
+		<string>armv6</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
