@@ -11,8 +11,8 @@
 @interface SSoundShape : NSObject
 
 @property (nonatomic) CGPoint sPoint;
-@property (nonatomic) float sWidth;
-@property (nonatomic) float sHeight;
+@property (nonatomic) int sWidth;
+@property (nonatomic) int sHeight;
 
 -(CGRect)makeShape;
 

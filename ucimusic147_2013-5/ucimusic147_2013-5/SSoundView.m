@@ -9,6 +9,7 @@
 #import "SSoundView.h"
 #import "MUS147Event_Touch.h"
 #import "MUS147AQPlayer.h"
+#import "MUS147Event_note.h"
 extern MUS147AQPlayer* aqp;
 
 @implementation SSoundView
@@ -107,8 +108,13 @@ extern MUS147AQPlayer* aqp;
             [[UIColor redColor] set];
             CGContextFillRect(context, shape1);
             [aqp getSynthVoice].amp = [MUS147Event_Touch yToAmp:shape.sHeight/self.bounds.size.height];
-            [aqp getSynthVoice].freq = [MUS147Event_Touch xToFreq:shape.sWidth/self.bounds.size.width];
+            [self noteCall:shape.sPoint.x];
         }
+        
+        if(shape != playhead && !CGRectIntersectsRect(shape1, playhead.makeShape)) {
+            [aqp getSynthVoice].amp = 0;
+        }
+        
     }
 }
 
@@ -123,8 +129,56 @@ extern MUS147AQPlayer* aqp;
     playhead.sPoint = CGPointMake(playhead.sPoint.x, playhead.sPoint.y + 1);
     [self setNeedsDisplay];
 }
-    
 
+//dividing up screen into 12 sections. 
+-(float)noteCall:(int)x
+{
+
+    int position = (int)(x / (self.bounds.size.width / 12));
+    switch(position)
+    {
+        case 0:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(60)];
+            break;
+        case 1:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(61)];
+            break;
+        case 2:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(62)];
+            break;
+        case 3:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(63)];
+            break;
+        case 4:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(64)];
+            break;
+        case 5:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(65)];
+            break;
+        case 6:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(66)];
+            break;
+        case 7:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(67)];
+            break;
+        case 8:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(68)];
+            break;
+        case 9:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(69)];
+            break;
+        case 10:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(70)];
+            break;
+        case 11:
+            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(71)];
+            break;
+        default:
+            break;
+            
+    }
+    return 0;
+}
 
 @end
 

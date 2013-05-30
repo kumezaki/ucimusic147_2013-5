@@ -36,6 +36,7 @@
 -(void)drawSoundShape;
 -(void)shake;
 -(void)updatePlayhead;
+-(float)noteCall:(int)x;
 
 
 
