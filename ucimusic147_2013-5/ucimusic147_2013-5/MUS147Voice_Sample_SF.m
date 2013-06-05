@@ -16,11 +16,11 @@
     
     /* get a path to the sound file */
     /* note that the file name and file extension are set here */
-    CFURLRef mSoundFileURLRef = CFBundleCopyResourceURL(CFBundleGetMainBundle(),CFSTR("Music147"),CFSTR("aif"),NULL);
+    //CFURLRef mSoundFileURLRef = CFBundleCopyResourceURL(CFBundleGetMainBundle(),CFSTR("Music147"),CFSTR("aif"),NULL);
     
     /* open the file and get the fileID */
     OSStatus result = noErr;
-    result = AudioFileOpenURL(mSoundFileURLRef,kAudioFileReadPermission,0,&fileID);
+    //result = AudioFileOpenURL(mSoundFileURLRef,kAudioFileReadPermission,0,&fileID);
     if (result != noErr)
         NSLog(@"AudioFileOpenURL exception %ld",result);
     

@@ -13,6 +13,7 @@
 @property (nonatomic) CGPoint sPoint;
 @property (nonatomic) int sWidth;
 @property (nonatomic) int sHeight;
+@property (nonatomic) bool active;
 
 -(CGRect)makeShape;
 

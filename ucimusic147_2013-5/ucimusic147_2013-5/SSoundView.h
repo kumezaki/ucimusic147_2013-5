@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "SSoundShape.h"
+#import "MUS147Voice.h"
+
+#define kMaxNumVoices 4
 
 @interface SSoundView : UIView {
     UITouch* touch;
@@ -22,7 +25,12 @@
     UIColor *uciBlueColor;
     UIColor *uciGoldColor;
     
+    MUS147Voice *voice[kMaxNumVoices];
+    
+    int added;
 }
+
+@property int voiceNum;
 
 // Touch Methods
 -(void)doTouchesOn:(NSSet *)touches withEvent:(UIEvent *)event;

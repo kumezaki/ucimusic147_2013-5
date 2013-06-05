@@ -7,7 +7,7 @@
 //
 
 #import "MUS147Sequencer.h"
-
+#import "MUS147Event_Note.h"
 #import "MUS147Event_Touch.h"
 
 @implementation MUS147Sequencer
@@ -59,6 +59,7 @@
                 // PLAYING
                 if (!event.on)
                     [event doOn];
+                NSLog(@"Playing event at time: %f", event.startTime);
             }
         }
 }
@@ -123,6 +124,21 @@
     e.type = on ? kMUS147Event_Touch_ON : kMUS147Event_Touch_OFF;
     
     [seq addEvent:e];
+}
+
+-(void)addEventNote:(Float64)startTime :(Float64)duration :(SInt16)noteNum :(Float64)amp {
+    MUS147Event_Note* e = [[MUS147Event_Note alloc] init];
+    e.startTime = startTime;
+    e.duration = duration;
+    e.noteNum = noteNum;
+    e.amp = amp;
+    e.on = YES;
+    
+    [seq addEvent:e];
+}
+
+-(void)reset {
+    seq.numEvents = 0;
 }
 
 @end

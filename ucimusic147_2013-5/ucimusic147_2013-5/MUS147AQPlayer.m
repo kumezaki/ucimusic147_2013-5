@@ -163,7 +163,6 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
         MUS147AQBufferCallback(nil, queue, buffers[i]);
 	
     result = AudioQueueStart(queue, nil);
-		
 	return result;
 }
 

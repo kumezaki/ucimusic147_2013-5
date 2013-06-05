@@ -14,13 +14,13 @@ extern MUS147AQPlayer* aqp;
 
 @implementation SSoundView
 
+@synthesize voiceNum;
 
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
         // Initialization code
-        totalSoundShapes = [[NSMutableArray alloc] init]; // initialized array
-        self.backgroundColor = [UIColor blackColor];
+        totalSoundShapes = [[NSMutableArray alloc] init];
         uciBlueColor = [UIColor colorWithRed:0./255. green:34./255. blue:68./255. alpha:1.];
         uciGoldColor = [UIColor colorWithRed:255./255. green:222./255. blue:108./255. alpha:1.];
         
@@ -29,7 +29,10 @@ extern MUS147AQPlayer* aqp;
         playhead.sPoint = CGPointMake(0, 0);
         playhead.sWidth = 400;
         playhead.sHeight = 5;
-        [totalSoundShapes addObject:playhead]; // pushing it into the array
+        [totalSoundShapes addObject:playhead]; // Add it into the NSMutableArray
+        
+        voiceNum = 0;
+        added = 0;
     }
     return self;
 }
@@ -88,9 +91,10 @@ extern MUS147AQPlayer* aqp;
     // Set the stroke width
     CGContextSetLineWidth(context, 3.0);
     
-    // Reset playhead position (currently the playhead isn't driven by the sequencer just clicks)
+    // Reset playhead position
     if(playhead.sPoint.y > self.bounds.size.height) {
         playhead.sPoint = CGPointMake(playhead.sPoint.x, 0);
+        [aqp.sequencer rewind];
     }
     
     // Loop through the shapes and draw each to the view
@@ -107,21 +111,25 @@ extern MUS147AQPlayer* aqp;
         if(shape != playhead && CGRectIntersectsRect(shape1, playhead.makeShape)) {
             [[UIColor redColor] set];
             CGContextFillRect(context, shape1);
-            [aqp getSynthVoice].amp = [MUS147Event_Touch yToAmp:shape.sHeight/self.bounds.size.height];
-            [self noteCall:shape.sPoint.x];
-        }
+            
+            // Add sound event for current shape if it's not currently active
+            if(!shape.active) {
+                float startTime = aqp.sequencer.scoreTime;
+                float duration = shape.sHeight/self.bounds.size.height*6.75;
+                int noteNum = [self noteCall:shape.sPoint.x];
+                float amp = fabs(shape.sWidth / self.bounds.size.width);
         
-        if(shape != playhead && !CGRectIntersectsRect(shape1, playhead.makeShape)) {
-            [aqp getSynthVoice].amp = 0;
+                [aqp.sequencer addEventNote:startTime :duration :noteNum :amp];
+                shape.active = YES; // Set shape to active to prevent it from being added multiple times
+            }
         }
-        
     }
 }
 
-// Remove all the shape objects on phone shake 
 -(void)shake {
-    [totalSoundShapes removeAllObjects];
-    [totalSoundShapes addObject:playhead]; // adds the playhead back, because it gets deleted in the removeAllObjects
+    [totalSoundShapes removeAllObjects]; // Remove all objects from the NSMutableArray
+    [totalSoundShapes addObject:playhead]; // Add playhead back
+    [aqp.sequencer reset];
     [self setNeedsDisplay];
 }
 
@@ -129,55 +137,37 @@ extern MUS147AQPlayer* aqp;
     playhead.sPoint = CGPointMake(playhead.sPoint.x, playhead.sPoint.y + 1);
     [self setNeedsDisplay];
 }
-
-//dividing up screen into 12 sections. 
--(float)noteCall:(int)x
-{
-
-    int position = (int)(x / (self.bounds.size.width / 12));
-    switch(position)
-    {
+ 
+-(float)noteCall:(int)x {
+    int position = x / (self.bounds.size.width / 12); // Divide screen into sections to select notes
+    switch(position) {
         case 0:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(60)];
-            break;
+            return 60;
         case 1:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(61)];
-            break;
+            return 61;
         case 2:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(62)];
-            break;
+            return 62;
         case 3:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(63)];
-            break;
+            return 63;
         case 4:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(64)];
-            break;
+            return 64;
         case 5:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(65)];
-            break;
+            return 65;
         case 6:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(66)];
-            break;
+            return 66;
         case 7:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(67)];
-            break;
+            return 67;
         case 8:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(68)];
-            break;
+            return 68;
         case 9:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(69)];
-            break;
+            return 69;
         case 10:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(70)];
-            break;
+            return 70;
         case 11:
-            [aqp getSynthVoice].freq = [MUS147Event_Note noteNumToFreq:(71)];
-            break;
+            return 71;
         default:
-            break;
-            
+            return 0;
     }
-    return 0;
 }
 
 @end

@@ -13,6 +13,13 @@
 @synthesize sPoint;
 @synthesize sWidth;
 @synthesize sHeight;
+@synthesize active;
+
+-(id)init {
+    self = [super init];
+    active = NO;
+    return self;
+}
 
 -(CGRect)makeShape {
     return CGRectMake(self.sPoint.x, self.sPoint.y, self.sWidth, self.sHeight); //returns a rectangle

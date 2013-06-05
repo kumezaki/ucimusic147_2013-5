@@ -33,5 +33,7 @@
 -(void)allOnNotesOff;
 
 -(void)addTouchEvent:(Float64)x :(Float64)y :(BOOL)on;
+-(void)addEventNote:(Float64)startTime :(Float64)duration :(SInt16)NoteNum :(Float64)amp;
+-(void)reset;
 
 @end

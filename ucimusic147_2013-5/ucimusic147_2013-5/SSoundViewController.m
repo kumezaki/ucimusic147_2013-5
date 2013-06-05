@@ -25,7 +25,6 @@ extern MUS147AQPlayer* aqp;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
 }
 
 - (void)viewDidUnload
@@ -45,6 +44,10 @@ extern MUS147AQPlayer* aqp;
 {
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
+    
+    // Create update timer connected to the aqp sequencer
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
+    [aqp.sequencer play];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -76,19 +79,22 @@ extern MUS147AQPlayer* aqp;
 }
 
 - (IBAction)BPM:(UISlider *)sender {
-    [updateTimer invalidate];
-    updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
-    [aqp.sequencer setBpm:sender.value];
-    NSLog(@"bpm: %f", sender.value);
-    NSLog(@"timeInterval: %f",updateTimer.timeInterval);
+    if(aqp.sequencer.playing) {
+        [updateTimer invalidate];
+        updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
+        [aqp.sequencer setBpm:sender.value];
+    }
 }
 
 - (IBAction)Pause:(UIButton *)sender {
     if(aqp.sequencer.playing) {
         [aqp.sequencer stop];
-        [aqp.sequencer rewind];
+        [updateTimer invalidate];
     }
-    else
+    else {
         [aqp.sequencer play];
+        updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
+    }
+        
 }
 @end
