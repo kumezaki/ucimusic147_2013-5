@@ -139,32 +139,24 @@ extern MUS147AQPlayer* aqp;
 }
  
 -(float)noteCall:(int)x {
-    int position = x / (self.bounds.size.width / 12); // Divide screen into sections to select notes
+    int position = x / (self.bounds.size.width / 8); // Divide screen into sections to select notes (C Major)
     switch(position) {
         case 0:
-            return 60;
+            return 60; //C
         case 1:
-            return 61;
+            return 62; //D
         case 2:
-            return 62;
+            return 64; //E
         case 3:
-            return 63;
+            return 65; //F
         case 4:
-            return 64;
+            return 67; //G
         case 5:
-            return 65;
+            return 69; //A
         case 6:
-            return 66;
+            return 71; //B
         case 7:
-            return 67;
-        case 8:
-            return 68;
-        case 9:
-            return 69;
-        case 10:
-            return 70;
-        case 11:
-            return 71;
+            return 72; //C (Octave Above)
         default:
             return 0;
     }
