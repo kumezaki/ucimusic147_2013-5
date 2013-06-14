@@ -207,7 +207,7 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
             for (UInt8 i = 0; i < kNumVoices_Synth; i++)
                 if (![voice_synth_blit[i] isOn]) {
                     v = voice_synth_blit[i];
-                    NSLog(@"getSynthVoice %d", synthVoiceType);
+                    //NSLog(@"getSynthVoice %d", synthVoiceType);
                 }
             break;
         case 1:
