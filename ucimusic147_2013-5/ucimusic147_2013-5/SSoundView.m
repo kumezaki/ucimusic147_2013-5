@@ -115,7 +115,7 @@ extern MUS147AQPlayer* aqp;
             // Add sound event for current shape if it's not currently active
             if(!shape.active) {
                 float startTime = aqp.sequencer.scoreTime;
-                float duration = shape.sHeight/self.bounds.size.height*6.75;
+                float duration = fabs(shape.sHeight/self.bounds.size.height*6.75);
                 int noteNum = [self noteCall:shape.sPoint.x];
                 float amp = fabs(shape.sWidth / self.bounds.size.width);
         
@@ -127,15 +127,18 @@ extern MUS147AQPlayer* aqp;
 }
 
 -(void)shake {
+    [aqp.sequencer allOnNotesOff];
+    [aqp.sequencer reset];
     [totalSoundShapes removeAllObjects]; // Remove all objects from the NSMutableArray
     [totalSoundShapes addObject:playhead]; // Add playhead back
-    [aqp.sequencer reset];
     [self setNeedsDisplay];
 }
 
 -(void)updatePlayhead {
-    playhead.sPoint = CGPointMake(playhead.sPoint.x, playhead.sPoint.y + 1);
-    [self setNeedsDisplay];
+    if(aqp.sequencer.playing) {
+        playhead.sPoint = CGPointMake(playhead.sPoint.x, playhead.sPoint.y + 1);
+        [self setNeedsDisplay];
+    }
 }
  
 -(float)noteCall:(int)x {

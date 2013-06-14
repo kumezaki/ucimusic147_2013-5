@@ -59,7 +59,8 @@
                 // PLAYING
                 if (!event.on)
                     [event doOn];
-                NSLog(@"Playing event at time: %f", event.startTime);
+                //MUS147Event_Note* e = (MUS147Event*)event;
+                //NSLog(@"Playing note: %d at time: %f for sec: %f", e.noteNum, e.startTime, e.duration);
             }
         }
 }
@@ -128,7 +129,7 @@
 
 -(void)addEventNote:(Float64)startTime :(Float64)duration :(SInt16)noteNum :(Float64)amp {
     MUS147Event_Note* e = [[MUS147Event_Note alloc] init];
-    e.startTime = startTime;
+    e.startTime = startTime + 0.05;
     e.duration = duration;
     e.noteNum = noteNum;
     e.amp = amp;

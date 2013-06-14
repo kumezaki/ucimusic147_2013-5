@@ -89,12 +89,10 @@ extern MUS147AQPlayer* aqp;
 - (IBAction)Pause:(UIButton *)sender {
     if(aqp.sequencer.playing) {
         [aqp.sequencer stop];
-        [updateTimer invalidate];
     }
     else {
         [aqp.sequencer play];
-        updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
     }
-        
+    
 }
 @end

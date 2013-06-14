@@ -14,7 +14,7 @@
 {
     self = [super init];
     
-    delayTime = 0.1;
+    delayTime = 0.2;
     delaySamples = delayTime * kSR;
     
     delayAmp = 0.2;
