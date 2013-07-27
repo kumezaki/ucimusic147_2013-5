@@ -14,10 +14,10 @@
 {
     self = [super init];
     
-    delayTime = 0.2;
-    delaySamples = delayTime * kSR;
+    self.delayTime = 0.2;
+    delaySamples = self.delayTime * kSR;
     
-    delayAmp = 0.2;
+    self.delayAmp = 0.2;
     
     writePos = 0;
     readPos = kMaxDelaySamples - delaySamples;

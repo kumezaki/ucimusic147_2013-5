@@ -17,13 +17,17 @@ extern MUS147AQPlayer* aqp;
 
 @synthesize window = _window;
 @synthesize viewController = _viewController;
+@synthesize navigationController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[SSoundViewController alloc] initWithNibName:@"SSoundViewController" bundle:nil];
-    self.window.rootViewController = self.viewController;
+    navigationController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    //self.window.rootViewController = self.viewController;
+    [navigationController setNavigationBarHidden:YES];
+    [_window addSubview:navigationController.view];
     [self.window makeKeyAndVisible];
     aqp = [[MUS147AQPlayer alloc] init];
     return YES;

@@ -14,8 +14,6 @@ extern MUS147AQPlayer* aqp;
 
 @implementation SSoundView
 
-@synthesize voiceNum;
-
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
@@ -30,9 +28,6 @@ extern MUS147AQPlayer* aqp;
         playhead.sWidth = 400;
         playhead.sHeight = 5;
         [totalSoundShapes addObject:playhead]; // Add it into the NSMutableArray
-        
-        voiceNum = 0;
-        added = 0;
     }
     return self;
 }

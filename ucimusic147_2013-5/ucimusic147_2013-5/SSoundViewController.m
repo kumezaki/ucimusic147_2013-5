@@ -12,6 +12,7 @@ extern MUS147AQPlayer* aqp;
 
 @implementation SSoundViewController
 @synthesize sView;
+@synthesize settingsController;
 
 - (void)didReceiveMemoryWarning
 {
@@ -87,12 +88,35 @@ extern MUS147AQPlayer* aqp;
 }
 
 - (IBAction)Pause:(UIButton *)sender {
+    [self sequencePause];
+}
+
+- (void)sequencePause {
     if(aqp.sequencer.playing) {
         [aqp.sequencer stop];
     }
     else {
         [aqp.sequencer play];
     }
+}
+
+- (IBAction)switchToSettings:(id)sender {
+    if (settingsController == nil) {
+        SSoundSettingsController *newSettingsController =
+        [[SSoundSettingsController alloc]
+         initWithNibName:@"NewViewController"
+         bundle:[NSBundle mainBundle]];
+        
+        self.settingsController = newSettingsController;
+    }
     
+    // How you reference your navigation controller will
+    // probably be a little different
+    [self.navigationController
+     pushViewController:self.settingsController
+     animated:YES];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    [self sequencePause];
 }
 @end

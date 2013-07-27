@@ -18,6 +18,8 @@
 		04EA1387174D98CE0037541F /* SSoundShape.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1384174D98CE0037541F /* SSoundShape.m */; };
 		04EA1388174D98CE0037541F /* SSoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EA1386174D98CE0037541F /* SSoundView.m */; };
 		377423261755CB4600C4F1D3 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 377423251755CB4600C4F1D3 /* AudioToolbox.framework */; };
+		37E6B7F717A47519005386A0 /* SSoundSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E6B7F517A47519005386A0 /* SSoundSettingsController.m */; };
+		37E6B7F817A47519005386A0 /* SSoundSettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E6B7F617A47519005386A0 /* SSoundSettingsController.xib */; };
 		37ED6C391755E7CB00590C2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37ED6C381755E7CB00590C2E /* Default-568h@2x.png */; };
 		900F9BA61756D5CF00C6AF17 /* MUS147AQPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 900F9B791756D5CF00C6AF17 /* MUS147AQPlayer.m */; };
 		900F9BA71756D5CF00C6AF17 /* MUS147AQRecorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 900F9B7B1756D5CF00C6AF17 /* MUS147AQRecorder.m */; };
@@ -65,6 +67,9 @@
 		04EA1386174D98CE0037541F /* SSoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundView.m; sourceTree = "<group>"; };
 		377423111755C91A00C4F1D3 /* Music147.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Music147.aif; sourceTree = "<group>"; };
 		377423251755CB4600C4F1D3 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		37E6B7F417A47518005386A0 /* SSoundSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundSettingsController.h; sourceTree = "<group>"; };
+		37E6B7F517A47519005386A0 /* SSoundSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundSettingsController.m; sourceTree = "<group>"; };
+		37E6B7F617A47519005386A0 /* SSoundSettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSoundSettingsController.xib; sourceTree = "<group>"; };
 		37ED6C381755E7CB00590C2E /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		900F9B781756D5CF00C6AF17 /* MUS147AQPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUS147AQPlayer.h; sourceTree = "<group>"; };
 		900F9B791756D5CF00C6AF17 /* MUS147AQPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUS147AQPlayer.m; sourceTree = "<group>"; };
@@ -212,6 +217,9 @@
 				900F9BA51756D5CF00C6AF17 /* MUS147Voice_Synth.m */,
 				04EA136F174D96E50037541F /* SSoundAppDelegate.h */,
 				04EA1370174D96E50037541F /* SSoundAppDelegate.m */,
+				37E6B7F417A47518005386A0 /* SSoundSettingsController.h */,
+				37E6B7F517A47519005386A0 /* SSoundSettingsController.m */,
+				37E6B7F617A47519005386A0 /* SSoundSettingsController.xib */,
 				04EA1372174D96E50037541F /* SSoundViewController.h */,
 				04EA1373174D96E50037541F /* SSoundViewController.m */,
 				04EA1375174D96E50037541F /* SSoundViewController.xib */,
@@ -290,6 +298,7 @@
 				04EA1377174D96E50037541F /* SSoundViewController.xib in Resources */,
 				37ED6C391755E7CB00590C2E /* Default-568h@2x.png in Resources */,
 				900F9BB51756D5CF00C6AF17 /* MUS147ViewController.xib in Resources */,
+				37E6B7F817A47519005386A0 /* SSoundSettingsController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +336,7 @@
 				900F9BBA1756D5CF00C6AF17 /* MUS147Voice_Sample_Mem.m in Sources */,
 				900F9BBB1756D5CF00C6AF17 /* MUS147Voice_Sample_SF.m in Sources */,
 				900F9BBC1756D5CF00C6AF17 /* MUS147Voice_Synth.m in Sources */,
+				37E6B7F717A47519005386A0 /* SSoundSettingsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

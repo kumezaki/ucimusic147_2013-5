@@ -197,6 +197,11 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
     return voice[pos];
 }
 
+-(MUS147Effect*)getEffect:(UInt8)pos
+{
+    return effect[pos];
+}
+
 -(MUS147Voice*)getSynthVoice
 {
     MUS147Voice* v = nil;
