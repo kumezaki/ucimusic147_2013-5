@@ -11,10 +11,11 @@
 @interface SSoundSettingsController : UIViewController {
     IBOutlet UISlider* ampSlider;
     IBOutlet UISlider* delaySlider;
-    
+    IBOutlet UISegmentedControl* waveSegmentedControl;
 }
 
 - (IBAction)setAmp:(id)sender;
 - (IBAction)setDelay:(id)sender;
+- (IBAction)setWaveType:(id)sender;
 
 @end

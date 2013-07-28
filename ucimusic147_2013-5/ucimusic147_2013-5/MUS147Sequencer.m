@@ -128,20 +128,12 @@
 }
 
 -(void)addEventNote:(Float64)startTime :(Float64)duration :(SInt16)noteNum :(Float64)amp {
-    if (seq.numEvents > 0)
-    {
-        MUS147Event* prev_e = [seq getEvent:(seq.numEvents-1)];
-        prev_e.duration = scoreTime - prev_e.startTime;
-        
-        //      NSLog(@"%f %f %f %s PREV(%f,%f)",scoreTime,x,y,on?"YES":"NO",prev_e.startTime,prev_e.duration);
-    }
-    
     MUS147Event_Note* e = [[MUS147Event_Note alloc] init];
     e.startTime = startTime + 0.05;
     e.duration = duration;
     e.noteNum = noteNum;
     e.amp = amp;
-    e.on = YES;
+    //e.on = YES;
     
     [seq addEvent:e];
 }

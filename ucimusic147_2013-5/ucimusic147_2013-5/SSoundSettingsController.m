@@ -44,11 +44,15 @@ extern MUS147AQPlayer* aqp;
 }
 
 - (IBAction)setAmp:(id)sender {
-    [aqp getVoice:0].freq = ampSlider.value;
+    [aqp getVoice:0].env.attack = ampSlider.value;
 }
 
 - (IBAction)setDelay:(id)sender {
     [aqp getEffect:1].delayAmp = delaySlider.value;
+}
+
+-(IBAction)setWaveType:(id)sender {
+    aqp.synthVoiceType = waveSegmentedControl.selectedSegmentIndex;
 }
 
 @end

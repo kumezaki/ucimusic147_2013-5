@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SSoundShape.h"
 #import "MUS147Voice.h"
+#import "MUS147AQPlayer.h"
 
 #define kMaxNumVoices 4
 
@@ -26,8 +27,7 @@
     UIColor *uciGoldColor;
     
     MUS147Voice *voice[kMaxNumVoices];
-    
-    int added;
+    NSInteger voiceNum;
 }
 
 @property int voiceNum;
