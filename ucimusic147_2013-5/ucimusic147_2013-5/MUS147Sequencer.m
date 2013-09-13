@@ -141,11 +141,13 @@
     switch (voiceType) {
         case kSine: e.amp = amp;
             break;
-        case kSquare: e.amp = amp * 0.8f;
+        case kSquare: e.amp = amp * 0.7f;
             break;
-        case kSaw : e.amp = amp;
+        case kSaw : e.amp = amp * 0.8f;
             break;
-        case kTriangle: e.amp = amp;
+        case kTriangle: e.amp = amp * 0.9f;
+            break;
+        case kBlit: e.amp = amp;
             break;
         default:
             break;

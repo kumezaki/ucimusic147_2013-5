@@ -49,9 +49,9 @@ extern MUS147AQPlayer* aqp;
 }
 
 - (IBAction)setAmp:(id)sender {
-    [aqp getVoice:0].env.attack = ampSlider.value;
-//    MUS147Effect_BiQuad* bq = [aqp getBiQuad];
-//    [bq biQuad_set:LPF:-3.:(ampSlider.value * kSR / 2. - 1000.):kSR:0.25];
+    MUS147Effect_BiQuad* bq = [aqp getBiQuad];
+    NSLog(@"filterType = %d", filterType);
+    [bq biQuad_set:filterType:-3.:(ampSlider.value * kSR / 2. - 1000.):kSR:0.25];
 }
 
 - (IBAction)setDelay:(id)sender {
@@ -59,8 +59,11 @@ extern MUS147AQPlayer* aqp;
 }
 
 -(IBAction)setWaveType:(id)sender {
-    //aqp.synthVoiceType = waveSegmentedControl.selectedSegmentIndex;
     [SSoundView setVoiceTypeID:waveSegmentedControl.selectedSegmentIndex];
+}
+
+-(IBAction)setFilterType:(id)sender {
+    filterType = filterSegmentedControl.selectedSegmentIndex;
 }
 
 @end

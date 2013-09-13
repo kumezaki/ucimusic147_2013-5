@@ -14,7 +14,8 @@ typedef NS_ENUM(NSUInteger, voiceType) {
     kSine,
     kSquare,
     kSaw,
-    kTriangle
+    kTriangle,
+    kBlit
 };
 
 @interface MUS147Event : NSObject {

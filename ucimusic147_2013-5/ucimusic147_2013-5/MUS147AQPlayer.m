@@ -79,11 +79,11 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
 
     for (UInt8 i = 0; i < kNumVoices_Synth; i++)
     {
-        //voice_synth_blit[i] = [[MUS147Voice_Synth alloc] init];
-        //voice_synth_blitsaw[i] = [[MUS147Voice_BLITSaw alloc] init];
         voice_synth_sine[i] = [[MUS147Voice_Synth_Sine alloc] init];
         voice_synth_square[i] = [[MUS147Voice_Synth_Square alloc] init];
         voice_synth_saw[i] = [[MUS147Voice_Synth_Saw alloc] init];
+        voice_synth_triangle[i] = [[MUS147Voice_Synth_Triangle alloc] init];
+        voice_synth_blitsaw[i] = [[MUS147Voice_BLITSaw alloc] init];
     }
 
     // ... then assign them to array of active voices
@@ -108,6 +108,18 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
             case 10:
             case 11:
                 voice[i] = voice_synth_saw[i-8];
+                break;
+            case 12:
+            case 13:
+            case 14:
+            case 15:
+                voice[i] = voice_synth_triangle[i-12];
+                break;
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+                voice[i] = voice_synth_blitsaw[i-16];
                 break;
             default:
                 break;
@@ -251,8 +263,16 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
             break;
         case kSquare: v = voice_synth_square[voiceIndex++];
             if (voiceIndex > 3) voiceIndex = 0;
+            break;
         case kSaw: v = voice_synth_saw[voiceIndex++];
             if (voiceIndex > 3) voiceIndex = 0;
+            break;
+        case kTriangle: v = voice_synth_triangle[voiceIndex++];
+            if (voiceIndex > 3) voiceIndex = 0;
+            break;
+        case kBlit: v = voice_synth_blitsaw[voiceIndex++];
+            if (voiceIndex > 3) voiceIndex = 0;
+            break;
         default:
             break;
     }

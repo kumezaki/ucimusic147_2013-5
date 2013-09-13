@@ -74,8 +74,9 @@ static NSInteger voiceTypeID;
         newSoundShape.sPoint = CGPointMake(pX, pY);
         newSoundShape.sWidth = dpX;
         newSoundShape.sHeight = dpY;
-        newSoundShape.color = uciBlueColor;
         newSoundShape.voiceType = voiceTypeID;
+        
+        [newSoundShape colorByNumber:voiceTypeID];
         [newSoundShape setFrame:newSoundShape.makeShape];
         [newSoundShape setBackgroundColor:newSoundShape.color];
         [newSoundShape.layer setBorderColor:uciGoldColor.CGColor];

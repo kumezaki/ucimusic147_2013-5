@@ -20,7 +20,7 @@
 #define kNumBuffers_Playback     3
 
 // number of possible playback voices
-#define kNumVoices          12
+#define kNumVoices          20
 
 // number of possible synth voices
 #define kNumVoices_Synth    4

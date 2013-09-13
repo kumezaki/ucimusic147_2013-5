@@ -8,7 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SSoundShape : UIView
+@interface SSoundShape : UIView {
+    UIColor *uciBlueColor;
+    UIColor *uciGoldColor;
+}
 
 @property (nonatomic) CGPoint sPoint;
 @property (nonatomic) int sWidth;
@@ -18,5 +21,6 @@
 @property (nonatomic) NSInteger voiceType;
 
 -(CGRect)makeShape;
+-(UIColor*)colorByNumber:(NSInteger)number;
 
 @end
