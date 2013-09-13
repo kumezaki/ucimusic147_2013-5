@@ -14,10 +14,12 @@
 @synthesize sWidth;
 @synthesize sHeight;
 @synthesize active;
+@synthesize color;
 
 -(id)init {
-    self = [super init];
-    active = NO;
+    if (self = [super init]) {
+        active = NO;
+    }
     return self;
 }
 

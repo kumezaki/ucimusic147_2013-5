@@ -16,6 +16,7 @@
 @interface MUS147Effect : NSObject {
     Float64 delayAudioBuffer[kMaxDelaySamples];
     
+    Float64 delayTime;
     UInt32 delaySamples;
     
     Float64 delayAmp;
@@ -24,8 +25,8 @@
     UInt32 readPos;
 }
 
-@property Float64 delayTime;
-@property Float64 delayAmp;
+@property (readwrite) Float64 delayTime;
+@property (readwrite) Float64 delayAmp;
 
 -(void)processAudioBuffer:(Float64*)buffer :(UInt32)num_samples;
 

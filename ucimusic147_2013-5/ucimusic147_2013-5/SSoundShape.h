@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SSoundShape : NSObject
+@interface SSoundShape : UIView
 
 @property (nonatomic) CGPoint sPoint;
 @property (nonatomic) int sWidth;
 @property (nonatomic) int sHeight;
-@property (nonatomic) bool active;
+@property (nonatomic) BOOL active;
+@property (nonatomic) UIColor *color;
 
 -(CGRect)makeShape;
 

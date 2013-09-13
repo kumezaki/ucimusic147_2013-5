@@ -17,11 +17,13 @@ enum {
     Float64 x;
     Float64 y;
     UInt8 type;
+    UInt8 voiceNum;
 }
 
 @property (readwrite) Float64 x;
 @property (readwrite) Float64 y;
 @property (readwrite) UInt8 type;
+@property (readwrite) UInt8 pos;
 
 +(Float64)xToFreq:(Float64)x;
 +(Float64)yToAmp:(Float64)y;

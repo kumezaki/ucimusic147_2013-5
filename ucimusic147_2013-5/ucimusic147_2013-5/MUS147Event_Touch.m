@@ -16,29 +16,32 @@ extern MUS147AQPlayer* aqp;
 @synthesize x;
 @synthesize y;
 @synthesize type;
+@synthesize pos;
 
 -(void)doOn
 {
 //    NSLog(@"%f %f %f %s %f touch %s",startTime,x,y,"doOn",duration,type?"on":"off");
 
-    [super doOn];
-    
-    if (type == kMUS147Event_Touch_OFF)
-    {
-        voice.amp = 0.0;
-    }
-    else
+    on = YES;
+    if (voice == nil)
+        voice = [aqp getSynthVoiceWithPos:pos];
+
+    if (type == kMUS147Event_Touch_ON)
     {
         voice.amp = [MUS147Event_Touch yToAmp:y];
         voice.freq = [MUS147Event_Touch xToFreq:x];
+        [voice on];
     }
+    else
+        [voice off];
 }
 
 -(void)doOff
 {
 //    NSLog(@"%f %f %f %s %f touch %s",startTime,x,y,"doOff",duration,type?"on":"off");
 
-    [super doOff];
+    on = NO;
+    voice = nil;
 }
 
 +(Float64)xToFreq:(Float64)x

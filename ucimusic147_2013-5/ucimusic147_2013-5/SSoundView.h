@@ -41,7 +41,7 @@
 -(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event;
 
 // Draw and Accelerometer methods 
--(void)drawSoundShape;
+-(void)drawSoundShapes;
 -(void)shake;
 -(void)updatePlayhead;
 -(float)noteCall:(int)x;

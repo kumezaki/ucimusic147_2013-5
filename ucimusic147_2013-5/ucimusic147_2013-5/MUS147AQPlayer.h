@@ -46,7 +46,7 @@
     MUS147Voice* voice[kNumVoices];
     
     MUS147Effect* effect[kNumEffects];
-    
+
     MUS147Sequencer* sequencer;
 }
 
@@ -60,7 +60,10 @@
 
 -(MUS147Voice*)getVoice:(UInt8)pos;
 -(MUS147Effect*)getEffect:(UInt8)pos;
+
 -(MUS147Voice*)getSynthVoice;
+-(MUS147Voice*)getSynthVoiceWithPos:(UInt8)pos;
+
 -(MUS147Voice*)getRecordVoice;
 
 -(MUS147Effect_BiQuad*)getBiQuad;

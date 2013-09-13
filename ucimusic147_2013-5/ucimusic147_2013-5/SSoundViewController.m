@@ -26,14 +26,16 @@ extern MUS147AQPlayer* aqp;
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    // Create update timer connected to the aqp sequencer
+    updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
+    [aqp.sequencer play];
 }
 
 - (void)viewDidUnload
 {
     [self setSView:nil];
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -45,10 +47,6 @@ extern MUS147AQPlayer* aqp;
 {
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
-    
-    // Create update timer connected to the aqp sequencer
-    updateTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0 / aqp.sequencer.bpm target:sView selector:@selector(updatePlayhead) userInfo:nil repeats:YES];
-    [aqp.sequencer play];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -109,14 +107,7 @@ extern MUS147AQPlayer* aqp;
         
         self.settingsController = newSettingsController;
     }
-    
-    // How you reference your navigation controller will
-    // probably be a little different
-    [self.navigationController
-     pushViewController:self.settingsController
-     animated:YES];
+    [self.navigationController pushViewController:self.settingsController animated:YES];
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    
-    [self sequencePause];
 }
 @end

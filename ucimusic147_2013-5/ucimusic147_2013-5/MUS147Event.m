@@ -16,31 +16,19 @@ extern MUS147AQPlayer* aqp;
 @synthesize startTime;
 @synthesize duration;
 @synthesize on;
-@synthesize voiceNum;
 
 -(void)doOn
 {
-    
-    if (voice == nil) {
-        //voice = [aqp getSynthVoice];
-        
-        if (voiceNum < 2) voiceNum = 2;
-        voice = [aqp getVoice:voiceNum++];
-        NSLog(@"EVENT: playing voiceNum = %ld", (long)voiceNum);
-        if (voiceNum > 4)
-            voiceNum = 2;
-    }
-    
-    
-
     on = YES;
+    if (voice == nil)
+        voice = [aqp getSynthVoice];
 }
 
 -(void)doOff
 {
-    voice = nil;
-
     on = NO;
+    voice.amp = 0;
+    voice = nil;
 }
 
 @end

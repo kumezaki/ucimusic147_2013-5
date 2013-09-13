@@ -10,9 +10,7 @@
 
 @implementation MUS147Effect
 
-@synthesize delayTime;
-@synthesize delayAmp;
-
+@synthesize delayTime, delayAmp;
 
 -(void)processAudioBuffer:(Float64*)buffer :(UInt32)num_samples
 {

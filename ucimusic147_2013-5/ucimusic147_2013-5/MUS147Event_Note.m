@@ -22,11 +22,13 @@ extern MUS147AQPlayer* aqp;
     
     voice.amp = amp;
     voice.freq = [MUS147Event_Note noteNumToFreq:noteNum];
+
+    [voice on];
 }
 
 -(void)doOff
 {
-    voice.amp = 0.0;
+    [voice off];
     
     [super doOff];
 }

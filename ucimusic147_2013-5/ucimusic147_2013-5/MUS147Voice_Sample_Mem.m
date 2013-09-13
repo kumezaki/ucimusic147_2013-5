@@ -42,4 +42,9 @@
 	}
 }
 
+-(void)clearSampleMemory
+{
+    memset(sampleMemory,0,sizeof(Float64)*kMaxRecBufferSize);
+}
+
 @end

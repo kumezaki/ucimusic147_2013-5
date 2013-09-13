@@ -35,7 +35,7 @@ extern MUS147AQPlayer* aqp;
 {
     for (UInt8 i = 0; i < kMaxNumTouches; i++)
     {
-        if (touch[i] == nil) continue; /* guard */
+        if (touch[i] == nil) continue;
         
         // Drawing code
         UIColor *uciBlueColor = [UIColor colorWithRed:0./255. green:34./255. blue:68./255. alpha:1.];
@@ -68,7 +68,7 @@ extern MUS147AQPlayer* aqp;
                 continue;
             }
             else
-                voice[t_pos] = [aqp getSynthVoice];
+                voice[t_pos] = [aqp getSynthVoiceWithPos:t_pos];
         }
 
         MUS147Voice* v = voice[t_pos];
@@ -86,10 +86,9 @@ extern MUS147AQPlayer* aqp;
         }
         
         if (aqp.sequencer.recording)
-            [aqp.sequencer addTouchEvent:x :y :YES];
-
-        touch[0] = t;
+            [aqp.sequencer addTouchEvent:x :y :YES :t_pos];
     }
+
     [self setNeedsDisplay];
 }
 
@@ -108,23 +107,21 @@ extern MUS147AQPlayer* aqp;
 
         if (v != nil)
         {
-//          v.amp = 0.;
             if (v.isOn)
                 [v off];
         }
         
         if (aqp.sequencer.recording)
-            [aqp.sequencer addTouchEvent:0. :0. :NO];
-
-        touch[t_pos] = nil;
+            [aqp.sequencer addTouchEvent:0. :0. :NO :t_pos];
     }
+    
     [self setNeedsDisplay];
 }
 
 -(SInt8)getTouchPos:(UITouch*)t
 {
     for (UInt8 i = 0; i < kMaxNumTouches; i++)
-        if (t == touch[i]) return i;
+            if (t == touch[i]) return i;
     return -1;
 }
 
@@ -144,7 +141,7 @@ extern MUS147AQPlayer* aqp;
     for (UInt8 i = 0; i < kMaxNumTouches; i++)
         if (t == touch[i])
         {
-            touch[i] = nil;
+            touch[i]  = nil;
             return i;
         }
     return -1;
@@ -172,7 +169,8 @@ extern MUS147AQPlayer* aqp;
 
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration
 {
-    NSLog(@"%f %f %f",acceleration.x,acceleration.y,acceleration.z);
+    // comment the NSLog when running on iOS (for Simulator leave it uncommented)
+//    NSLog(@"%f %f %f",acceleration.x,acceleration.y,acceleration.z);
 }
 
 @end

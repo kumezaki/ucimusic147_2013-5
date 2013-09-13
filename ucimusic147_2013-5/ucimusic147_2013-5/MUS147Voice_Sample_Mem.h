@@ -24,4 +24,6 @@
 
 -(void)writeToSampleMemory:(Float64*)buffer :(UInt32)num_samples;
 
+-(void)clearSampleMemory;
+
 @end

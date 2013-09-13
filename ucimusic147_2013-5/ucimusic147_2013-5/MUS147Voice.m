@@ -26,8 +26,8 @@
     self = [super init];
     
     env = [[MUS147Envelope alloc] init];
-	env.attack = 0.50;
-	env.release = 1.50;
+	env.attack = 0.4;
+	env.release = 0.05;
     
     return self;
 }

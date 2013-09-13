@@ -21,8 +21,6 @@
 @property (readwrite) Float64 duration;
 @property (readwrite) BOOL on;
 
-@property NSInteger voiceNum;
-
 -(void)doOn;
 -(void)doOff;
 

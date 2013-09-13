@@ -10,6 +10,7 @@
 #import "MUS147Event_Touch.h"
 #import "MUS147AQPlayer.h"
 #import "MUS147Event_note.h"
+#import <QuartzCore/QuartzCore.h>
 extern MUS147AQPlayer* aqp;
 
 @implementation SSoundView
@@ -25,15 +26,17 @@ extern MUS147AQPlayer* aqp;
         // Create the playhead
         playhead = [[SSoundShape alloc] init]; 
         playhead.sPoint = CGPointMake(0, 0);
-        playhead.sWidth = 400;
+        playhead.sWidth = self.frame.size.width;
         playhead.sHeight = 5;
+        playhead.color = uciBlueColor;
+        [playhead setFrame:playhead.makeShape];
+        [playhead setBackgroundColor:playhead.color];
+        [playhead.layer setBorderColor:uciGoldColor.CGColor];
+        [playhead.layer setBorderWidth:1.0f];
         [totalSoundShapes addObject:playhead]; // Add it into the NSMutableArray
+        [self addSubview:playhead];
     }
     return self;
-}
-
-- (void)drawRect:(CGRect)rect {
-    [self drawSoundShape];
 }
 
 -(void)doTouchesOn:(NSSet *)touches withEvent:(UIEvent *)event {}
@@ -69,10 +72,15 @@ extern MUS147AQPlayer* aqp;
         newSoundShape.sPoint = CGPointMake(pX, pY);
         newSoundShape.sWidth = dpX;
         newSoundShape.sHeight = dpY;
+        newSoundShape.color = uciBlueColor;
+        [newSoundShape setFrame:newSoundShape.makeShape];
+        [newSoundShape setBackgroundColor:newSoundShape.color];
+        [newSoundShape.layer setBorderColor:uciGoldColor.CGColor];
+        [newSoundShape.layer setBorderWidth:1.0f];
         
         // Add the shape Object to the Array
         [totalSoundShapes addObject:newSoundShape];
-        [self setNeedsDisplay];
+        [self addSubview:newSoundShape];
     }
 }
 
@@ -80,32 +88,18 @@ extern MUS147AQPlayer* aqp;
     [self doTouchesOff:touches withEvent:event];
 }
 
--(void)drawSoundShape {
-    // Get the Graphics Context
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    // Set the stroke width
-    CGContextSetLineWidth(context, 3.0);
-    
+-(void)drawSoundShapes {
     // Reset playhead position
-    if(playhead.sPoint.y > self.bounds.size.height) {
+    if(playhead.frame.origin.y+playhead.frame.size.height >= self.bounds.size.height) {
         playhead.sPoint = CGPointMake(playhead.sPoint.x, 0);
         [aqp.sequencer rewind];
     }
     
     // Loop through the shapes and draw each to the view
     for (SSoundShape *shape in totalSoundShapes) {
-        // Draw shape
-        CGRect shape1 = shape.makeShape;
-        CGContextAddRect(context, shape1);
-        [uciGoldColor set];
-        CGContextStrokePath(context);
-        [uciBlueColor set];
-        CGContextFillRect(context, shape1);
-        
         // Handle shape collision with playhead
-        if(shape != playhead && CGRectIntersectsRect(shape1, playhead.makeShape)) {
-            [[UIColor redColor] set];
-            CGContextFillRect(context, shape1);
+        if(shape != playhead && CGRectIntersectsRect(shape.makeShape, playhead.makeShape)) {
+            [shape setBackgroundColor:[UIColor redColor]];
             
             // Add sound event for current shape if it's not currently active
             if(!shape.active) {
@@ -117,6 +111,8 @@ extern MUS147AQPlayer* aqp;
                 [aqp.sequencer addEventNote:startTime :duration :noteNum :amp];
                 shape.active = YES; // Set shape to active to prevent it from being added multiple times
             }
+        } else {
+            [shape setBackgroundColor:shape.color];
         }
     }
 }
@@ -124,15 +120,17 @@ extern MUS147AQPlayer* aqp;
 -(void)shake {
     [aqp.sequencer allOnNotesOff];
     [aqp.sequencer reset];
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     [totalSoundShapes removeAllObjects]; // Remove all objects from the NSMutableArray
     [totalSoundShapes addObject:playhead]; // Add playhead back
-    [self setNeedsDisplay];
+    [self addSubview:playhead];
 }
 
 -(void)updatePlayhead {
     if(aqp.sequencer.playing) {
         playhead.sPoint = CGPointMake(playhead.sPoint.x, playhead.sPoint.y + 1);
-        [self setNeedsDisplay];
+        [playhead setFrame:playhead.makeShape];
+        [self drawSoundShapes];
     }
 }
  

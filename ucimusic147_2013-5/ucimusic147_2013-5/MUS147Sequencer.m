@@ -59,8 +59,8 @@
                 // PLAYING
                 if (!event.on)
                     [event doOn];
-                //MUS147Event_Note* e = (MUS147Event*)event;
-                //NSLog(@"Playing note: %d at time: %f for sec: %f", e.noteNum, e.startTime, e.duration);
+                MUS147Event_Note* e = (MUS147Event*)event;
+                NSLog(@"Playing note: %d at time: %f for sec: %f", e.noteNum, e.startTime, e.duration);
             }
         }
 }
@@ -105,7 +105,7 @@
     }
 }
 
--(void)addTouchEvent:(Float64)x :(Float64)y :(BOOL)on
+-(void)addTouchEvent:(Float64)x :(Float64)y :(BOOL)on :(UInt8)pos
 {
     if (!recording) return;
     
@@ -123,17 +123,18 @@
     e.x = x;
     e.y = y;
     e.type = on ? kMUS147Event_Touch_ON : kMUS147Event_Touch_OFF;
+    e.pos = pos;
     
     [seq addEvent:e];
 }
 
 -(void)addEventNote:(Float64)startTime :(Float64)duration :(SInt16)noteNum :(Float64)amp {
     MUS147Event_Note* e = [[MUS147Event_Note alloc] init];
-    e.startTime = startTime + 0.05;
+    e.startTime = startTime;// + 0.05;
     e.duration = duration;
     e.noteNum = noteNum;
     e.amp = amp;
-    //e.on = YES;
+    e.on = NO;
     
     [seq addEvent:e];
 }
