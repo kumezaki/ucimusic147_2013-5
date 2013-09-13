@@ -11,17 +11,20 @@
 #import "MUS147AQPlayer.h"
 extern MUS147AQPlayer* aqp;
 
-@implementation MUS147Event
+@implementation MUS147Event {
+    int count;
+}
 
 @synthesize startTime;
 @synthesize duration;
 @synthesize on;
+@synthesize vType;
 
 -(void)doOn
 {
     on = YES;
     if (voice == nil)
-        voice = [aqp getSynthVoice];
+        voice = [aqp getSynthVoiceOfType:vType];
 }
 
 -(void)doOff

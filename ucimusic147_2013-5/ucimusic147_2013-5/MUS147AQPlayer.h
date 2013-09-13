@@ -20,7 +20,7 @@
 #define kNumBuffers_Playback     3
 
 // number of possible playback voices
-#define kNumVoices          6
+#define kNumVoices          8
 
 // number of possible synth voices
 #define kNumVoices_Synth    4
@@ -48,6 +48,8 @@
     MUS147Effect* effect[kNumEffects];
 
     MUS147Sequencer* sequencer;
+    
+    NSInteger voiceIndex;
 }
 
 @property (nonatomic,readwrite) UInt8 synthVoiceType;
@@ -63,6 +65,7 @@
 
 -(MUS147Voice*)getSynthVoice;
 -(MUS147Voice*)getSynthVoiceWithPos:(UInt8)pos;
+-(MUS147Voice*)getSynthVoiceOfType:(NSInteger)voiceType;
 
 -(MUS147Voice*)getRecordVoice;
 

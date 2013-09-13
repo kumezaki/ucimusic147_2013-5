@@ -10,6 +10,13 @@
 
 #import "MUS147Voice.h"
 
+typedef NS_ENUM(NSUInteger, voiceType) {
+    kSine,
+    kSquare,
+    kSaw,
+    kTriangle
+};
+
 @interface MUS147Event : NSObject {
     Float64 startTime;
     Float64 duration;
@@ -20,6 +27,7 @@
 @property (readwrite) Float64 startTime;
 @property (readwrite) Float64 duration;
 @property (readwrite) BOOL on;
+@property (nonatomic, readwrite) NSInteger vType;
 
 -(void)doOn;
 -(void)doOff;

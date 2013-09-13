@@ -68,12 +68,14 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
 	aqp = self;
     
     // first allocate pools of voices ...
-    voice_samp_mem[0] = [[MUS147Voice_Sample_Mem alloc] init];
-    voice_samp_sf[0] = [[MUS147Voice_Sample_SF alloc] init];
+//    voice_samp_mem[0] = [[MUS147Voice_Sample_Mem alloc] init];
+//    voice_samp_sf[0] = [[MUS147Voice_Sample_SF alloc] init];
+    
+    voiceIndex = 0;
 
     for (UInt8 i = 0; i < kNumVoices_Synth; i++)
     {
-        voice_synth_blit[i] = [[MUS147Voice_BLIT alloc] init];
+        voice_synth_blit[i] = [[MUS147Voice_Synth alloc] init];
         voice_synth_blitsaw[i] = [[MUS147Voice_BLITSaw alloc] init];
     }
 
@@ -83,16 +85,12 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
         switch (i)
         {
             case 0:
-                //voice[i] = voice_samp_mem[0];
-                break;
             case 1:
-                //voice[i] = voice_samp_sf[0];
-                break;
             case 2:
             case 3:
             case 4:
             case 5:
-                voice[i] = voice_synth_blit[i-2];
+                voice[i] = voice_synth_blit[i];
                 break;
             default:
                 break;
@@ -180,19 +178,19 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
 
 -(void)setSynthVoiceType:(UInt8)type
 {
-    synthVoiceType = type;
-    
-    switch (synthVoiceType)
-    {
-        case 0:
-            for (UInt8 i = 0; i < kNumVoices_Synth; i++)
-                voice[i+2] = voice_synth_blit[i];
-            break;
-        case 1:
-            for (UInt8 i = 0; i < kNumVoices_Synth; i++)
-                voice[i+2] = voice_synth_blitsaw[i];
-            break;
-    }
+//    synthVoiceType = type;
+//    
+//    switch (synthVoiceType)
+//    {
+//        case 0:
+//            for (UInt8 i = 0; i < kNumVoices_Synth; i++)
+//                voice[i+2] = voice_synth_blit[i];
+//            break;
+//        case 1:
+//            for (UInt8 i = 0; i < kNumVoices_Synth; i++)
+//                voice[i+2] = voice_synth_blitsaw[i];
+//            break;
+//    }
 }
 
 -(MUS147Voice*)getVoice:(UInt8)pos
@@ -225,6 +223,19 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
             break;
     }
 
+    return v;
+}
+
+-(MUS147Voice*)getSynthVoiceOfType:(NSInteger)voiceType {
+    MUS147Voice* v = nil;
+    switch (voiceType) {
+        case kSine: v = voice_synth_blit[voiceIndex++];
+            if (voiceIndex > 3) voiceIndex = 0;
+            break;
+            
+        default:
+            break;
+    }
     return v;
 }
 

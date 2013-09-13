@@ -8,7 +8,11 @@
 
 #import "SSoundSettingsController.h"
 #import "MUS147AQPlayer.h"
+#import "MUS147Effect.h"
 #import "MUS147Effect_Delay.h"
+#import "MUS147Effect_Limiter.h"
+#import "MUS147Effect_BiQuad.h"
+#import "MUS147AQShared.h"
 extern MUS147AQPlayer* aqp;
 
 @interface SSoundSettingsController ()
@@ -45,6 +49,8 @@ extern MUS147AQPlayer* aqp;
 
 - (IBAction)setAmp:(id)sender {
     [aqp getVoice:0].env.attack = ampSlider.value;
+//    MUS147Effect_BiQuad* bq = [aqp getBiQuad];
+//    [bq biQuad_set:LPF:-3.:(ampSlider.value * kSR / 2. - 1000.):kSR:0.25];
 }
 
 - (IBAction)setDelay:(id)sender {

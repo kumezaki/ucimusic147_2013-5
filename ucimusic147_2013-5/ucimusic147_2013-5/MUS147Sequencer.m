@@ -7,6 +7,7 @@
 //
 
 #import "MUS147Sequencer.h"
+#import "MUS147Event.h"
 #import "MUS147Event_Note.h"
 #import "MUS147Event_Touch.h"
 
@@ -128,12 +129,13 @@
     [seq addEvent:e];
 }
 
--(void)addEventNote:(Float64)startTime :(Float64)duration :(SInt16)noteNum :(Float64)amp {
+-(void)addEventNote:(Float64)startTime :(Float64)duration :(SInt16)noteNum :(Float64)amp :(NSInteger)voiceType {
     MUS147Event_Note* e = [[MUS147Event_Note alloc] init];
     e.startTime = startTime;// + 0.05;
     e.duration = duration;
     e.noteNum = noteNum;
     e.amp = amp;
+    e.vType = voiceType;
     e.on = NO;
     
     [seq addEvent:e];

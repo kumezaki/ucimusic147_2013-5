@@ -108,7 +108,7 @@ extern MUS147AQPlayer* aqp;
                 int noteNum = [self noteCall:shape.sPoint.x];
                 float amp = fabs(shape.sWidth / self.bounds.size.width);
         
-                [aqp.sequencer addEventNote:startTime :duration :noteNum :amp];
+                [aqp.sequencer addEventNote:startTime :duration :noteNum :amp :0];
                 shape.active = YES; // Set shape to active to prevent it from being added multiple times
             }
         } else {
