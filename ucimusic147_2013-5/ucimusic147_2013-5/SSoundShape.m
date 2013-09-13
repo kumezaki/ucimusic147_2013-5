@@ -15,6 +15,7 @@
 @synthesize sHeight;
 @synthesize active;
 @synthesize color;
+@synthesize voiceType;
 
 -(id)init {
     if (self = [super init]) {

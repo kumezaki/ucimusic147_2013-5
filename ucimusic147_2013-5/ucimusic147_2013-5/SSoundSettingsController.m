@@ -13,6 +13,7 @@
 #import "MUS147Effect_Limiter.h"
 #import "MUS147Effect_BiQuad.h"
 #import "MUS147AQShared.h"
+#import "SSoundView.h"
 extern MUS147AQPlayer* aqp;
 
 @interface SSoundSettingsController ()
@@ -58,7 +59,8 @@ extern MUS147AQPlayer* aqp;
 }
 
 -(IBAction)setWaveType:(id)sender {
-    aqp.synthVoiceType = waveSegmentedControl.selectedSegmentIndex;
+    //aqp.synthVoiceType = waveSegmentedControl.selectedSegmentIndex;
+    [SSoundView setVoiceTypeID:waveSegmentedControl.selectedSegmentIndex];
 }
 
 @end

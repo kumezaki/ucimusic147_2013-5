@@ -20,7 +20,7 @@
 #define kNumBuffers_Playback     3
 
 // number of possible playback voices
-#define kNumVoices          8
+#define kNumVoices          12
 
 // number of possible synth voices
 #define kNumVoices_Synth    4
@@ -42,6 +42,11 @@
     MUS147Voice* voice_samp_sf[1];
     MUS147Voice* voice_synth_blit[kNumVoices_Synth];
     MUS147Voice* voice_synth_blitsaw[kNumVoices_Synth];
+    
+    MUS147Voice* voice_synth_sine[kNumVoices_Synth];
+    MUS147Voice* voice_synth_square[kNumVoices_Synth];
+    MUS147Voice* voice_synth_saw[kNumVoices_Synth];
+    MUS147Voice* voice_synth_triangle[kNumVoices_Synth];
 
     MUS147Voice* voice[kNumVoices];
     

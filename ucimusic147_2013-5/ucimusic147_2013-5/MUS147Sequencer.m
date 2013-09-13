@@ -61,7 +61,7 @@
                 if (!event.on)
                     [event doOn];
                 MUS147Event_Note* e = (MUS147Event*)event;
-                NSLog(@"Playing note: %d at time: %f for sec: %f", e.noteNum, e.startTime, e.duration);
+                //NSLog(@"Playing note: %d at time: %f for sec: %f", e.noteNum, e.startTime, e.duration);
             }
         }
 }
@@ -131,12 +131,25 @@
 
 -(void)addEventNote:(Float64)startTime :(Float64)duration :(SInt16)noteNum :(Float64)amp :(NSInteger)voiceType {
     MUS147Event_Note* e = [[MUS147Event_Note alloc] init];
-    e.startTime = startTime;// + 0.05;
+    e.startTime = startTime; // + 0.05;
     e.duration = duration;
     e.noteNum = noteNum;
-    e.amp = amp;
     e.vType = voiceType;
     e.on = NO;
+    
+    // set amplitude with scalers
+    switch (voiceType) {
+        case kSine: e.amp = amp;
+            break;
+        case kSquare: e.amp = amp * 0.8f;
+            break;
+        case kSaw : e.amp = amp;
+            break;
+        case kTriangle: e.amp = amp;
+            break;
+        default:
+            break;
+    }
     
     [seq addEvent:e];
 }

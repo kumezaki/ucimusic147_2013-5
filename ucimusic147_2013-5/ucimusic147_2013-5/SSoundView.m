@@ -15,6 +15,8 @@ extern MUS147AQPlayer* aqp;
 
 @implementation SSoundView
 
+static NSInteger voiceTypeID;
+
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
@@ -73,6 +75,7 @@ extern MUS147AQPlayer* aqp;
         newSoundShape.sWidth = dpX;
         newSoundShape.sHeight = dpY;
         newSoundShape.color = uciBlueColor;
+        newSoundShape.voiceType = voiceTypeID;
         [newSoundShape setFrame:newSoundShape.makeShape];
         [newSoundShape setBackgroundColor:newSoundShape.color];
         [newSoundShape.layer setBorderColor:uciGoldColor.CGColor];
@@ -108,7 +111,7 @@ extern MUS147AQPlayer* aqp;
                 int noteNum = [self noteCall:shape.sPoint.x];
                 float amp = fabs(shape.sWidth / self.bounds.size.width);
         
-                [aqp.sequencer addEventNote:startTime :duration :noteNum :amp :0];
+                [aqp.sequencer addEventNote:startTime :duration :noteNum :amp :shape.voiceType];
                 shape.active = YES; // Set shape to active to prevent it from being added multiple times
             }
         } else {
@@ -156,6 +159,11 @@ extern MUS147AQPlayer* aqp;
         default:
             return 0;
     }
+}
+
++(void)setVoiceTypeID:(NSInteger)voiceType {
+    voiceTypeID = voiceType;
+    NSLog(@"voiceTypeID = %ld", (long)voiceTypeID);
 }
 
 @end

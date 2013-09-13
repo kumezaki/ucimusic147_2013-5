@@ -25,12 +25,7 @@
     
     UIColor *uciBlueColor;
     UIColor *uciGoldColor;
-    
-    MUS147Voice *voice[kMaxNumVoices];
-    NSInteger voiceNum;
 }
-
-@property int voiceNum;
 
 // Touch Methods
 -(void)doTouchesOn:(NSSet *)touches withEvent:(UIEvent *)event;
@@ -46,6 +41,7 @@
 -(void)updatePlayhead;
 -(float)noteCall:(int)x;
 
++(void)setVoiceTypeID:(NSInteger)voiceType;
 
 
 @end

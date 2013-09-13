@@ -14,40 +14,19 @@
 
 -(void)addToAudioBuffer:(Float64*)buffer :(UInt32)num_samples
 {
-//    // compute normalized angular frequency
-//    Float64 deltaNormPhase = freq / kSR;
-//    
-//    // iterate through each element in the buffer
-//    for (UInt32 i = 0; i < num_samples; i++)
-//    {
-//        // assign value of sinusoid at phase position to buffer element
-//		buffer[i] += amp * sin(normPhase * 2 * M_PI);
-//        
-//        // advance the phase position
-//		normPhase += deltaNormPhase;
-//        
-//        
-//    }
-    
     // compute normalized angular frequency
-    Float64 phase = (freq * 2 * M_PI)/ 22050.0f;
+    Float64 deltaNormPhase = freq / kSR;
     
     // iterate through each element in the buffer
-    for (UInt32 i = 0; i < num_samples; i++) {
+    for (UInt32 i = 0; i < num_samples; i++)
+    {
         // assign value of sinusoid at phase position to buffer element
+		buffer[i] += amp * sin(normPhase * 2 * M_PI);
         
-        buffer[i] += amp * sin(normPhase);   //Sine
+        // advance the phase position
+		normPhase += deltaNormPhase;
         
-        //buffer[i] += normPhase < M_PI ? amp : amp * -1.0;  //Square
         
-        //buffer[i] += amp - (amp / M_PI * normPhase);     //Sawtooth
-        
-        //buffer[i] += normPhase < M_PI ? -1*amp + (2*amp/M_PI) * normPhase : 3*amp - (2*amp/M_PI) * normPhase;    //Triangle
-        
-        if(normPhase > (2 * M_PI))
-            normPhase -= 2 * M_PI;
-    
-        normPhase += phase;
     }
 }
 

@@ -14,6 +14,10 @@
 #import "MUS147Voice_Sample_SF.h"
 #import "MUS147Voice_Sample_Mem.h"
 #import "MUS147Voice_Synth.h"
+#import "MUS147Voice_Synth_Sine.h"
+#import "MUS147Voice_Synth_Square.h"
+#import "MUS147Voice_Synth_Saw.h"
+#import "MUS147Voice_Synth_Triangle.h"
 #import "MUS147Voice_BLIT.h"
 #import "MUS147Voice_BLITSaw.h"
 
@@ -75,8 +79,11 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
 
     for (UInt8 i = 0; i < kNumVoices_Synth; i++)
     {
-        voice_synth_blit[i] = [[MUS147Voice_Synth alloc] init];
-        voice_synth_blitsaw[i] = [[MUS147Voice_BLITSaw alloc] init];
+        //voice_synth_blit[i] = [[MUS147Voice_Synth alloc] init];
+        //voice_synth_blitsaw[i] = [[MUS147Voice_BLITSaw alloc] init];
+        voice_synth_sine[i] = [[MUS147Voice_Synth_Sine alloc] init];
+        voice_synth_square[i] = [[MUS147Voice_Synth_Square alloc] init];
+        voice_synth_saw[i] = [[MUS147Voice_Synth_Saw alloc] init];
     }
 
     // ... then assign them to array of active voices
@@ -88,9 +95,19 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
             case 1:
             case 2:
             case 3:
+                voice[i] = voice_synth_sine[i];
+                break;
             case 4:
             case 5:
-                voice[i] = voice_synth_blit[i];
+            case 6:
+            case 7:
+                voice[i] = voice_synth_square[i-4];
+                break;
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+                voice[i] = voice_synth_saw[i-8];
                 break;
             default:
                 break;
@@ -229,10 +246,13 @@ void MUS147AQBufferCallback(void *inUserData, AudioQueueRef inAQ, AudioQueueBuff
 -(MUS147Voice*)getSynthVoiceOfType:(NSInteger)voiceType {
     MUS147Voice* v = nil;
     switch (voiceType) {
-        case kSine: v = voice_synth_blit[voiceIndex++];
+        case kSine: v = voice_synth_sine[voiceIndex++];
             if (voiceIndex > 3) voiceIndex = 0;
             break;
-            
+        case kSquare: v = voice_synth_square[voiceIndex++];
+            if (voiceIndex > 3) voiceIndex = 0;
+        case kSaw: v = voice_synth_saw[voiceIndex++];
+            if (voiceIndex > 3) voiceIndex = 0;
         default:
             break;
     }

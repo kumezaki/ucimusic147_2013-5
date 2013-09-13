@@ -15,6 +15,7 @@
 @property (nonatomic) int sHeight;
 @property (nonatomic) BOOL active;
 @property (nonatomic) UIColor *color;
+@property (nonatomic) NSInteger voiceType;
 
 -(CGRect)makeShape;
 

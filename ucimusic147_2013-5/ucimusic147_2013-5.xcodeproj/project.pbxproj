@@ -40,6 +40,10 @@
 		37BCCE7A17A61FC3007F4F71 /* MUS147Voice_Sample.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BCCE6217A61FC3007F4F71 /* MUS147Voice_Sample.m */; };
 		37BCCE7B17A61FC3007F4F71 /* MUS147Voice_Synth.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BCCE6417A61FC3007F4F71 /* MUS147Voice_Synth.m */; };
 		37BCCE7C17A61FC3007F4F71 /* MUS147Voice.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BCCE6617A61FC3007F4F71 /* MUS147Voice.m */; };
+		37E0AB7017E2F9F200618BC6 /* MUS147Voice_Synth_Sine.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0AB6F17E2F9F200618BC6 /* MUS147Voice_Synth_Sine.m */; };
+		37E0AB7317E2FBBD00618BC6 /* MUS147Voice_Synth_Square.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0AB7217E2FBBC00618BC6 /* MUS147Voice_Synth_Square.m */; };
+		37E0AB7617E303DF00618BC6 /* MUS147Voice_Synth_Saw.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0AB7517E303DD00618BC6 /* MUS147Voice_Synth_Saw.m */; };
+		37E0AB7C17E3051000618BC6 /* MUS147Voice_Synth_Triangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E0AB7B17E3050F00618BC6 /* MUS147Voice_Synth_Triangle.m */; };
 		37E6B7F717A47519005386A0 /* SSoundSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E6B7F517A47519005386A0 /* SSoundSettingsController.m */; };
 		37E6B7F817A47519005386A0 /* SSoundSettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E6B7F617A47519005386A0 /* SSoundSettingsController.xib */; };
 		37ED6C391755E7CB00590C2E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 37ED6C381755E7CB00590C2E /* Default-568h@2x.png */; };
@@ -111,6 +115,14 @@
 		37BCCE6417A61FC3007F4F71 /* MUS147Voice_Synth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUS147Voice_Synth.m; sourceTree = "<group>"; };
 		37BCCE6517A61FC3007F4F71 /* MUS147Voice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUS147Voice.h; sourceTree = "<group>"; };
 		37BCCE6617A61FC3007F4F71 /* MUS147Voice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUS147Voice.m; sourceTree = "<group>"; };
+		37E0AB6E17E2F9F100618BC6 /* MUS147Voice_Synth_Sine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUS147Voice_Synth_Sine.h; sourceTree = "<group>"; };
+		37E0AB6F17E2F9F200618BC6 /* MUS147Voice_Synth_Sine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUS147Voice_Synth_Sine.m; sourceTree = "<group>"; };
+		37E0AB7117E2FBBB00618BC6 /* MUS147Voice_Synth_Square.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUS147Voice_Synth_Square.h; sourceTree = "<group>"; };
+		37E0AB7217E2FBBC00618BC6 /* MUS147Voice_Synth_Square.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUS147Voice_Synth_Square.m; sourceTree = "<group>"; };
+		37E0AB7417E303DC00618BC6 /* MUS147Voice_Synth_Saw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUS147Voice_Synth_Saw.h; sourceTree = "<group>"; };
+		37E0AB7517E303DD00618BC6 /* MUS147Voice_Synth_Saw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUS147Voice_Synth_Saw.m; sourceTree = "<group>"; };
+		37E0AB7A17E3050E00618BC6 /* MUS147Voice_Synth_Triangle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MUS147Voice_Synth_Triangle.h; sourceTree = "<group>"; };
+		37E0AB7B17E3050F00618BC6 /* MUS147Voice_Synth_Triangle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MUS147Voice_Synth_Triangle.m; sourceTree = "<group>"; };
 		37E6B7F417A47518005386A0 /* SSoundSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSoundSettingsController.h; sourceTree = "<group>"; };
 		37E6B7F517A47519005386A0 /* SSoundSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSoundSettingsController.m; sourceTree = "<group>"; };
 		37E6B7F617A47519005386A0 /* SSoundSettingsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SSoundSettingsController.xib; sourceTree = "<group>"; };
@@ -210,6 +222,14 @@
 				37BCCE6217A61FC3007F4F71 /* MUS147Voice_Sample.m */,
 				37BCCE6317A61FC3007F4F71 /* MUS147Voice_Synth.h */,
 				37BCCE6417A61FC3007F4F71 /* MUS147Voice_Synth.m */,
+				37E0AB6E17E2F9F100618BC6 /* MUS147Voice_Synth_Sine.h */,
+				37E0AB6F17E2F9F200618BC6 /* MUS147Voice_Synth_Sine.m */,
+				37E0AB7117E2FBBB00618BC6 /* MUS147Voice_Synth_Square.h */,
+				37E0AB7217E2FBBC00618BC6 /* MUS147Voice_Synth_Square.m */,
+				37E0AB7417E303DC00618BC6 /* MUS147Voice_Synth_Saw.h */,
+				37E0AB7517E303DD00618BC6 /* MUS147Voice_Synth_Saw.m */,
+				37E0AB7A17E3050E00618BC6 /* MUS147Voice_Synth_Triangle.h */,
+				37E0AB7B17E3050F00618BC6 /* MUS147Voice_Synth_Triangle.m */,
 				37BCCE6517A61FC3007F4F71 /* MUS147Voice.h */,
 				37BCCE6617A61FC3007F4F71 /* MUS147Voice.m */,
 				04EA136F174D96E50037541F /* SSoundAppDelegate.h */,
@@ -333,6 +353,10 @@
 				37BCCE7A17A61FC3007F4F71 /* MUS147Voice_Sample.m in Sources */,
 				37BCCE7B17A61FC3007F4F71 /* MUS147Voice_Synth.m in Sources */,
 				37BCCE7C17A61FC3007F4F71 /* MUS147Voice.m in Sources */,
+				37E0AB7017E2F9F200618BC6 /* MUS147Voice_Synth_Sine.m in Sources */,
+				37E0AB7317E2FBBD00618BC6 /* MUS147Voice_Synth_Square.m in Sources */,
+				37E0AB7617E303DF00618BC6 /* MUS147Voice_Synth_Saw.m in Sources */,
+				37E0AB7C17E3051000618BC6 /* MUS147Voice_Synth_Triangle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
